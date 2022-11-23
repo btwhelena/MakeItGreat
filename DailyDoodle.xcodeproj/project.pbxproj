@@ -11,6 +11,14 @@
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
 		D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AF129265954006DCBA7 /* Preview Assets.xcassets */; };
+		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
+		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
+		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
+		D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4F292E3CFA00192923 /* MapViewController.swift */; };
+		D97C4A52292E3D0B00192923 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A51292E3D0B00192923 /* UserView.swift */; };
+		D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A53292E3D1800192923 /* UserViewController.swift */; };
+		D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A59292E3DF000192923 /* TabBarView.swift */; };
+		D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A5B292E3E0400192923 /* CustomShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6538AF129265954006DCBA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D97C4A4F292E3CFA00192923 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D97C4A51292E3D0B00192923 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		D97C4A53292E3D1800192923 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		D97C4A59292E3DF000192923 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D97C4A5B292E3E0400192923 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,12 @@
 		D6538AE929265952006DCBA7 /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D97C4A43292E3C1900192923 /* Model */,
+				D97C4A44292E3C2F00192923 /* View */,
+				D97C4A45292E3C3400192923 /* Controller */,
+				D97C4A46292E3C7B00192923 /* Protocols */,
+				D97C4A47292E3C8F00192923 /* Utils */,
+				D97C4A48292E3C9800192923 /* Components */,
 				D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */,
 				D6538AEC29265952006DCBA7 /* ContentView.swift */,
 				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
@@ -65,6 +87,88 @@
 				D6538AF129265954006DCBA7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D97C4A43292E3C1900192923 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D97C4A44292E3C2F00192923 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D97C4A57292E3D4C00192923 /* User */,
+				D97C4A56292E3D3900192923 /* Map */,
+				D97C4A55292E3D2A00192923 /* Gallery */,
+				D97C4A58292E3DAB00192923 /* TabBar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D97C4A45292E3C3400192923 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D97C4A46292E3C7B00192923 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D97C4A47292E3C8F00192923 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D97C4A48292E3C9800192923 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D97C4A55292E3D2A00192923 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				D97C4A49292E3CC900192923 /* GalleryView.swift */,
+				D97C4A4B292E3CD700192923 /* GalleryViewController.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		D97C4A56292E3D3900192923 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D97C4A4D292E3CEE00192923 /* MapView.swift */,
+				D97C4A4F292E3CFA00192923 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		D97C4A57292E3D4C00192923 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D97C4A51292E3D0B00192923 /* UserView.swift */,
+				D97C4A53292E3D1800192923 /* UserViewController.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D97C4A58292E3DAB00192923 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D97C4A59292E3DF000192923 /* TabBarView.swift */,
+				D97C4A5B292E3E0400192923 /* CustomShape.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
+				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
+				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
+				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
+				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
+				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
+				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
+				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +409,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -326,6 +439,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
