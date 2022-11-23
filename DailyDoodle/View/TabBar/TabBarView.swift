@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 //TAB BAR ANIMADA
 struct TabBar: View {
     @State var selectedtab = "add"
