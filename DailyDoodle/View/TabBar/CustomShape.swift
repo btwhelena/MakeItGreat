@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CustomShape: Shape {
     var xAxis: CGFloat
     var animatableData: CGFloat {
