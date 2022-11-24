@@ -4,6 +4,7 @@
 //
 //  Created by Maria Letícia Dutra de Oliveira on 23/11/22.
 
+import SwiftUI
 //TAB BAR ANIMADA
 struct TabBar: View {
     @State var selectedtab = "map"
