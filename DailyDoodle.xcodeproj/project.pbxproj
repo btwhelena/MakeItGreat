@@ -11,6 +11,7 @@
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
 		D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AF129265954006DCBA7 /* Preview Assets.xcassets */; };
+		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
 		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
 		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
 		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
@@ -27,6 +28,9 @@
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6538AF129265954006DCBA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
+		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
 		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -67,6 +71,7 @@
 		D6538AE929265952006DCBA7 /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D91D8B47292FAFED000B1379 /* Info.plist */,
 				D97C4A43292E3C1900192923 /* Model */,
 				D97C4A44292E3C2F00192923 /* View */,
 				D97C4A45292E3C3400192923 /* Controller */,
@@ -89,6 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D91D8B49292FB0BD000B1379 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D91D8B4A292FB0CA000B1379 /* FontsManager.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D97C4A43292E3C1900192923 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		D97C4A44292E3C2F00192923 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D91D8B49292FB0BD000B1379 /* Fonts */,
 				D97C4A57292E3D4C00192923 /* User */,
 				D97C4A56292E3D3900192923 /* Map */,
 				D97C4A55292E3D2A00192923 /* Gallery */,
@@ -165,6 +179,7 @@
 		D97C4A58292E3DAB00192923 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				D91D8B46292FAF74000B1379 /* Eri Serif.ttf */,
 				D97C4A59292E3DF000192923 /* TabBarView.swift */,
 				D97C4A5B292E3E0400192923 /* CustomShape.swift */,
 			);
@@ -273,6 +288,7 @@
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
+				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +420,7 @@
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -434,6 +451,7 @@
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyDoodle/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

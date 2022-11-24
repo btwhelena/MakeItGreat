@@ -29,7 +29,7 @@ struct TabBar: View {
                     .tag("gallery")
                 UserView()
                     .ignoresSafeArea(.all, edges: .all)
-                    .tag("user")
+                    .tag("profile")
             }
 
             //MARK: Configurações de imagens e botões para o que estiver selecionado
@@ -47,7 +47,7 @@ struct TabBar: View {
                                     .resizable()
                                     .renderingMode(.template)
                                     .aspectRatio(contentMode: .fit)
-                                    .frame(width: 40, height: 40)
+                                    .frame(width: 50, height: 40)
                                     .foregroundColor(selectedtab == image ? getColor(image: image) : Color(red: 255/255, green: 97/255, blue: 134/255))
                                     .padding(selectedtab == image  ? 10 : 0)
                                     .background(Color(red: 255/255, green: 97/255, blue: 134/255).opacity(selectedtab == image  ? 1 : 0).clipShape(Circle()))
@@ -57,7 +57,7 @@ struct TabBar: View {
                                 if selectedtab != image {
                                     Text(image)
                                         .foregroundColor(Color(red: 255/255, green: 97/255, blue: 134/255))
-                                        .font(.footnote)
+                                        .font(.custom(FontsManager.Eri_Serif.regular, size: 13))
                                         .fixedSize()
                                 }
                             }.frame(height: 45)
@@ -99,7 +99,7 @@ struct TabBar: View {
     }
 }
 
-var icons = ["gallery", "map", "user"]
+var icons = ["gallery", "map", "profile"]
 
 struct TabBar_Previews: PreviewProvider {
     static var previews: some View {
