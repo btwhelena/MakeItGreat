@@ -12,6 +12,8 @@ struct DrawView: View {
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
+    @StateObject private var vm = CloudKitCrudVM()
+    @StateObject private var authenticate = CloudKitUser()
 
     var body: some View {
         ZStack(alignment: .top){
@@ -21,7 +23,7 @@ struct DrawView: View {
 
             HStack{
                 Button(action: {
-
+                    onClearTapped()
                 },
                        label: {
                     Image(systemName: "xmark.circle")
@@ -35,7 +37,7 @@ struct DrawView: View {
                 Spacer().frame(width: 225)
 
                 Button(action: {
-
+                    onSaved()
                 },
                        label: {
                     Image(systemName: "checkmark.circle")
@@ -47,6 +49,26 @@ struct DrawView: View {
                 })
             }
 
+        }
+    }
+}
+
+private extension DrawView {
+    func onClearTapped(){
+        canvasView.drawing = PKDrawing()
+    }
+
+    func onUndoTapped(){
+        guard let preview = previewDrawing else { return }
+        canvasView.drawing = preview
+    }
+
+    func onSaved() {
+        if !canvasView.drawing.bounds.isEmpty {
+            image = canvasView.drawing.image(from: canvasView.bounds, scale: UIScreen.main.scale)
+            previewDrawing = canvasView.drawing
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            vm.addItem(image: image)
         }
     }
 }
