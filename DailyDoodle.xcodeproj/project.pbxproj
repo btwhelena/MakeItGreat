@@ -20,6 +20,8 @@
 		D97936292930E7610062BCE1 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936282930E7610062BCE1 /* Protocol.swift */; };
 		D979362B2930E76B0062BCE1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362A2930E76B0062BCE1 /* Util.swift */; };
 		D979362D2930E7730062BCE1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362C2930E7730062BCE1 /* Components.swift */; };
+		D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362E2931282E0062BCE1 /* OtherButton.swift */; };
+		D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979363029312ACB0062BCE1 /* SaveButton.swift */; };
 		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
 		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
 		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
@@ -48,6 +50,8 @@
 		D97936282930E7610062BCE1 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		D979362A2930E76B0062BCE1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D979362C2930E7730062BCE1 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		D979362E2931282E0062BCE1 /* OtherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherButton.swift; sourceTree = "<group>"; };
+		D979363029312ACB0062BCE1 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				0D8F56BE2930E9C2005C1672 /* PencilKit */,
+				D979362E2931282E0062BCE1 /* OtherButton.swift */,
+				D979363029312ACB0062BCE1 /* SaveButton.swift */,
 			);
 			path = Draw;
 			sourceTree = "<group>";
@@ -328,12 +334,14 @@
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
 				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
+				D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */,
 				D979362B2930E76B0062BCE1 /* Util.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				D97936252930E7480062BCE1 /* Swift.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
+				D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,

@@ -12,15 +12,16 @@ struct DrawView: View {
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
+    @Environment(\.undoManager) private var undoManager
 
     var body: some View {
-        ZStack(alignment: .top){
+        ZStack(alignment: .topTrailing){
             CanvasView(canvasView: $canvasView)
                 .background(Color.black)
                 .ignoresSafeArea()
 
             VStack {
-                HStack{
+                HStack {
                     Button(action: {
 
                     },
@@ -35,9 +36,9 @@ struct DrawView: View {
                     Spacer().frame(width: 20)
 
                     Button(action: {
-
+                        undoManager?.undo()
                     },
-                           label: {
+                    label: {
                         Image(systemName: "arrow.counterclockwise.circle")
                             .resizable()
                             .scaledToFit()
@@ -45,20 +46,8 @@ struct DrawView: View {
                             .foregroundColor(Theme.pinkCTA)
 
                     })
-
-                    Spacer().frame(width: 225)
-
-                    Button(action: {
-
-                    },
-                           label: {
-                        Image(systemName: "checkmark.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Theme.pinkCTA)
-
-                    })
+                    Spacer().frame(width: 130)
+                    OtherButton()
                 }
 
                 Image("snowman")
