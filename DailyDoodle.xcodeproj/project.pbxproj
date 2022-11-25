@@ -12,6 +12,11 @@
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
 		D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AF129265954006DCBA7 /* Preview Assets.xcassets */; };
 		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
+		D97936252930E7480062BCE1 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936242930E7480062BCE1 /* Swift.swift */; };
+		D97936272930E7570062BCE1 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936262930E7570062BCE1 /* UserController.swift */; };
+		D97936292930E7610062BCE1 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936282930E7610062BCE1 /* Protocol.swift */; };
+		D979362B2930E76B0062BCE1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362A2930E76B0062BCE1 /* Util.swift */; };
+		D979362D2930E7730062BCE1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362C2930E7730062BCE1 /* Components.swift */; };
 		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
 		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
 		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
@@ -31,6 +36,11 @@
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
+		D97936242930E7480062BCE1 /* Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
+		D97936262930E7570062BCE1 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		D97936282930E7610062BCE1 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		D979362A2930E76B0062BCE1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		D979362C2930E7730062BCE1 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 		D97C4A43292E3C1900192923 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D97936242930E7480062BCE1 /* Swift.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 		D97C4A45292E3C3400192923 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D97936262930E7570062BCE1 /* UserController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +143,7 @@
 		D97C4A46292E3C7B00192923 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D97936282930E7610062BCE1 /* Protocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 		D97C4A47292E3C8F00192923 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D979362A2930E76B0062BCE1 /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -145,6 +159,7 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D979362C2930E7730062BCE1 /* Components.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -279,12 +294,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
+				D979362D2930E7730062BCE1 /* Components.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
+				D97936292930E7610062BCE1 /* Protocol.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
 				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
+				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
+				D979362B2930E76B0062BCE1 /* Util.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
+				D97936252930E7480062BCE1 /* Swift.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
