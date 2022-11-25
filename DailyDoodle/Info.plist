@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Gemini Moon.otf</string>
 		<string>Eri Serif.ttf</string>
 	</array>
 </dict>

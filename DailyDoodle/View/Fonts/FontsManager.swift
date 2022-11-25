@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct FontsManager {
+
     struct Eri_Serif {
         static let regular = "EriSerif"
+    }
+
+    struct Gemini_Moon {
+        static let regular = "GeminiMoon"
     }
 }
