@@ -19,33 +19,55 @@ struct DrawView: View {
                 .background(Color.black)
                 .ignoresSafeArea()
 
-            HStack{
-                Button(action: {
+            VStack {
+                HStack{
+                    Button(action: {
 
-                },
-                       label: {
-                    Image(systemName: "xmark.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.black)
+                    },
+                           label: {
+                        Image(systemName: "xmark.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Theme.pinkCTA)
 
-                })
+                    })
+                    Spacer().frame(width: 20)
 
-                Spacer().frame(width: 225)
+                    Button(action: {
 
-                Button(action: {
+                    },
+                           label: {
+                        Image(systemName: "arrow.counterclockwise.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Theme.pinkCTA)
 
-                },
-                       label: {
-                    Image(systemName: "checkmark.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.black)
+                    })
 
-                })
+                    Spacer().frame(width: 225)
+
+                    Button(action: {
+
+                    },
+                           label: {
+                        Image(systemName: "checkmark.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(Theme.pinkCTA)
+
+                    })
+                }
+
+                Image("snowman")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 200, height: 120,alignment: .center)
+                    .clipShape(Circle())
             }
+
 
         }
     }
