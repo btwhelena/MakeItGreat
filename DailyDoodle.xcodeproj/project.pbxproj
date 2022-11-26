@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
+		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
+		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
+		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
 		D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AF129265954006DCBA7 /* Preview Assets.xcassets */; };
 		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
-		D97936252930E7480062BCE1 /* Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936242930E7480062BCE1 /* Swift.swift */; };
+		D97936252930E7480062BCE1 /* DrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936242930E7480062BCE1 /* DrawModel.swift */; };
 		D97936272930E7570062BCE1 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936262930E7570062BCE1 /* UserController.swift */; };
 		D97936292930E7610062BCE1 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936282930E7610062BCE1 /* Protocol.swift */; };
-		D979362B2930E76B0062BCE1 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362A2930E76B0062BCE1 /* Util.swift */; };
-		D979362D2930E7730062BCE1 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D979362C2930E7730062BCE1 /* Components.swift */; };
 		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
 		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
 		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
@@ -29,6 +31,11 @@
 
 /* Begin PBXFileReference section */
 		0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gemini Moon.otf"; sourceTree = "<group>"; };
+		0D8F56BF2930E9D0005C1672 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCrud.swift; sourceTree = "<group>"; };
+		D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUser.swift; sourceTree = "<group>"; };
+		D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodle.entitlements; sourceTree = "<group>"; };
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,11 +44,9 @@
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
-		D97936242930E7480062BCE1 /* Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift.swift; sourceTree = "<group>"; };
+		D97936242930E7480062BCE1 /* DrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModel.swift; sourceTree = "<group>"; };
 		D97936262930E7570062BCE1 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D97936282930E7610062BCE1 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		D979362A2930E76B0062BCE1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		D979362C2930E7730062BCE1 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -63,6 +68,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D8F56BD2930E9B0005C1672 /* Draw */ = {
+			isa = PBXGroup;
+			children = (
+				0D8F56BE2930E9C2005C1672 /* PencilKit */,
+			);
+			path = Draw;
+			sourceTree = "<group>";
+		};
+		0D8F56BE2930E9C2005C1672 /* PencilKit */ = {
+			isa = PBXGroup;
+			children = (
+				0D8F56BF2930E9D0005C1672 /* CanvasView.swift */,
+				0D8F56C12930E9FC005C1672 /* DrawView.swift */,
+			);
+			path = PencilKit;
+			sourceTree = "<group>";
+		};
+		D63ADF792930FCF7000CCE19 /* iCloud */ = {
+			isa = PBXGroup;
+			children = (
+				D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */,
+				D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */,
+			);
+			path = iCloud;
+			sourceTree = "<group>";
+		};
 		D6538ADE29265952006DCBA7 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +113,7 @@
 		D6538AE929265952006DCBA7 /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */,
 				D91D8B47292FAFED000B1379 /* Info.plist */,
 				D97C4A43292E3C1900192923 /* Model */,
 				D97C4A44292E3C2F00192923 /* View */,
@@ -91,8 +123,6 @@
 				D97C4A48292E3C9800192923 /* Components */,
 				D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */,
 				D6538AEC29265952006DCBA7 /* ContentView.swift */,
-				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
-				D6538AF029265954006DCBA7 /* Preview Content */,
 			);
 			path = DailyDoodle;
 			sourceTree = "<group>";
@@ -118,7 +148,7 @@
 		D97C4A43292E3C1900192923 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D97936242930E7480062BCE1 /* Swift.swift */,
+				D97936242930E7480062BCE1 /* DrawModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,11 +156,10 @@
 		D97C4A44292E3C2F00192923 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D91D8B49292FB0BD000B1379 /* Fonts */,
+				0D8F56BD2930E9B0005C1672 /* Draw */,
 				D97C4A57292E3D4C00192923 /* User */,
 				D97C4A56292E3D3900192923 /* Map */,
 				D97C4A55292E3D2A00192923 /* Gallery */,
-				D97C4A58292E3DAB00192923 /* TabBar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,7 +183,8 @@
 		D97C4A47292E3C8F00192923 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				D979362A2930E76B0062BCE1 /* Util.swift */,
+				D63ADF792930FCF7000CCE19 /* iCloud */,
+				D91D8B49292FB0BD000B1379 /* Fonts */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,7 +192,9 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D979362C2930E7730062BCE1 /* Components.swift */,
+				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
+				D6538AF029265954006DCBA7 /* Preview Content */,
+				D97C4A58292E3DAB00192923 /* TabBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -296,21 +328,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
-				D979362D2930E7730062BCE1 /* Components.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
+				D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */,
 				D97936292930E7610062BCE1 /* Protocol.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
+				D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */,
 				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
-				D979362B2930E76B0062BCE1 /* Util.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
-				D97936252930E7480062BCE1 /* Swift.swift in Sources */,
+				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
+				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
+				0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,13 +470,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyDoodle/DailyDoodle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,7 +491,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = DD.CloudKitPOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -467,13 +504,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyDoodle/DailyDoodle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DailyDoodle/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = QW8X8R78UC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyDoodle/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -485,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = DD.CloudKitPOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
