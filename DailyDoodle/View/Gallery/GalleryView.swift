@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct GalleryView: View {
+    
+    @State var currentIndex: Int = 0
+    @State var showDraws: Bool = false
+
     var body: some View {
-        Text("Hey")
+        NavigationView {
+            VStack {
+
+                Spacer()
+
+                GeminiTitle(title: "Galeria")
+
+                BookView()
+
+            }
+        }
     }
 }
 
-struct GalleryView_Previews: PreviewProvider {
-    static var previews: some View {
-        GalleryView()
-    }
-}
