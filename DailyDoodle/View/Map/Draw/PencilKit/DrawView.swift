@@ -7,12 +7,14 @@
 import SwiftUI
 import PencilKit
 
+
+//MARK: DRAW SCREEN FOR DAILY CHALLENGES
 struct DrawView: View {
 
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
-    @Environment(\.undoManager) private var undoManager
+    @State var labelHeight = CGFloat.leastNonzeroMagnitude
 
     var body: some View {
         ZStack(alignment: .topTrailing){
@@ -21,34 +23,17 @@ struct DrawView: View {
                 .ignoresSafeArea()
 
             VStack {
-                HStack {
-                    Button(action: {
-
-                    },
-                           label: {
-                        Image(systemName: "xmark.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Theme.pinkCTA)
-
-                    })
-                    Spacer().frame(width: 20)
-
-                    Button(action: {
-                        undoManager?.undo()
-                    },
-                    label: {
-                        Image(systemName: "arrow.counterclockwise.circle")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(Theme.pinkCTA)
-
-                    })
-                    Spacer().frame(width: 130)
+                HStack (spacing: 9){
+                    Spacer().frame(width: 150)
+                    CloseButton()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    UndoButton()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Spacer().frame(width: 170)
                     OtherButton()
-                }
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+
+                }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
 
                 Image("snowman")
                     .resizable()
@@ -56,7 +41,6 @@ struct DrawView: View {
                     .frame(width: 200, height: 120,alignment: .center)
                     .clipShape(Circle())
             }
-
 
         }
     }

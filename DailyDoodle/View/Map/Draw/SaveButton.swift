@@ -20,12 +20,12 @@ struct SaveButton: View {
         }, label: {
             Image(systemName: icon)
                 .foregroundColor(Theme.pinkCTA)
-                .font(.system(size: 35, weight: .bold))
-                .background(.white)
-                .mask(Circle())
-                .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
-                .scaleEffect(open ? 1 : 0)
-                .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(Double(delay)))
+                .font(.system(size: 40, weight: .bold))
         })
+        .padding()
+        .mask(Circle())
+        .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
+        .scaleEffect(open ? 1 : 0)
+        .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(Double(delay)))
     }
 }

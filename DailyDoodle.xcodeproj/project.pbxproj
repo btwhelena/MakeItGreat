@@ -30,6 +30,8 @@
 		D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A53292E3D1800192923 /* UserViewController.swift */; };
 		D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A59292E3DF000192923 /* TabBarView.swift */; };
 		D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A5B292E3E0400192923 /* CustomShape.swift */; };
+		D9A172F82932DB73000B3DFF /* UndoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A172F72932DB73000B3DFF /* UndoButton.swift */; };
+		D9A172FA2932DBE9000B3DFF /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A172F92932DBE9000B3DFF /* CloseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		D97C4A53292E3D1800192923 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		D97C4A59292E3DF000192923 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D97C4A5B292E3E0400192923 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		D9A172F72932DB73000B3DFF /* UndoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoButton.swift; sourceTree = "<group>"; };
+		D9A172F92932DBE9000B3DFF /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 				0D8F56BE2930E9C2005C1672 /* PencilKit */,
 				D979362E2931282E0062BCE1 /* OtherButton.swift */,
 				D979363029312ACB0062BCE1 /* SaveButton.swift */,
+				D9A172F92932DBE9000B3DFF /* CloseButton.swift */,
 			);
 			path = Draw;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			children = (
 				0D8F56BF2930E9D0005C1672 /* CanvasView.swift */,
 				0D8F56C12930E9FC005C1672 /* DrawView.swift */,
+				D9A172F72932DB73000B3DFF /* UndoButton.swift */,
 			);
 			path = PencilKit;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 				D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */,
 				D979362B2930E76B0062BCE1 /* Util.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
+				D9A172FA2932DBE9000B3DFF /* CloseButton.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				D97936252930E7480062BCE1 /* Swift.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
@@ -347,6 +354,7 @@
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
 				0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */,
+				D9A172F82932DB73000B3DFF /* UndoButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
