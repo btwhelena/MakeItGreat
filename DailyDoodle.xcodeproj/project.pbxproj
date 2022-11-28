@@ -13,6 +13,10 @@
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
 		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
 		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
+		0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */; };
+		0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE02930F8C70059B273 /* LevelView.swift */; };
+		0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE2293104A40059B273 /* DateHelper.swift */; };
+		0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
@@ -41,6 +45,10 @@
 		D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCrud.swift; sourceTree = "<group>"; };
 		D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUser.swift; sourceTree = "<group>"; };
 		D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodle.entitlements; sourceTree = "<group>"; };
+		0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMap.swift; sourceTree = "<group>"; };
+		0B0EBFE02930F8C70059B273 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		0B0EBFE2293104A40059B273 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateHelper.swift; path = DailyDoodle/Components/LevelMap/DateHelper.swift; sourceTree = SOURCE_ROOT; };
+		0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayChallengeSheet.swift; sourceTree = "<group>"; };
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,7 +59,6 @@
 		D97936242930E7480062BCE1 /* DrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModel.swift; sourceTree = "<group>"; };
 		D97936262930E7570062BCE1 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D97936282930E7610062BCE1 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		D979362A2930E76B0062BCE1 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		D979362E2931282E0062BCE1 /* OtherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherButton.swift; sourceTree = "<group>"; };
 		D979363029312ACB0062BCE1 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
@@ -98,14 +105,6 @@
 			path = PencilKit;
 			sourceTree = "<group>";
 		};
-		0D8F56C52934DA32005C1672 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				D979362A2930E76B0062BCE1 /* Util.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		D63ADF792930FCF7000CCE19 /* iCloud */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +114,28 @@
 			path = iCloud;
 			sourceTree = "<group>";
 		};
+		0B0EBFDD2930F8A00059B273 /* LevelMap */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */,
+				0B0EBFE02930F8C70059B273 /* LevelView.swift */,
+			);
+			path = LevelMap;
+			sourceTree = "<group>";
+		};
+		0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */,
+			);
+			path = TodayChallengeSheet;
+			sourceTree = "<group>";
+		};
 		D6538ADE29265952006DCBA7 = {
 			isa = PBXGroup;
 			children = (
 				D6538AE929265952006DCBA7 /* DailyDoodle */,
 				D6538AE829265952006DCBA7 /* Products */,
-				0D8F56C52934DA32005C1672 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8F56BD2930E9B0005C1672 /* Draw */,
+				0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */,
 				D97C4A57292E3D4C00192923 /* User */,
 				D97C4A56292E3D3900192923 /* Map */,
 				D97C4A55292E3D2A00192923 /* Gallery */,
@@ -201,6 +217,7 @@
 			children = (
 				D63ADF792930FCF7000CCE19 /* iCloud */,
 				D91D8B49292FB0BD000B1379 /* Fonts */,
+				0B0EBFE2293104A40059B273 /* DateHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D97C4A58292E3DAB00192923 /* TabBar */,
+				0B0EBFDD2930F8A00059B273 /* LevelMap */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -266,6 +284,8 @@
 			dependencies = (
 			);
 			name = DailyDoodle;
+			packageProductDependencies = (
+			);
 			productName = DailyDoodle;
 			productReference = D6538AE729265952006DCBA7 /* DailyDoodle.app */;
 			productType = "com.apple.product-type.application";
@@ -294,6 +314,8 @@
 				Base,
 			);
 			mainGroup = D6538ADE29265952006DCBA7;
+			packageReferences = (
+			);
 			productRefGroup = D6538AE829265952006DCBA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +362,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */,
+				0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */,
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
@@ -352,6 +376,8 @@
 				D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
 				D9A172FA2932DBE9000B3DFF /* CloseButton.swift in Sources */,
+				0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */,
+				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
@@ -509,7 +535,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -543,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
