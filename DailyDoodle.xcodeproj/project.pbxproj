@@ -45,7 +45,7 @@
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Components/Assets.xcassets; sourceTree = "<group>"; };
 		D6538AF129265954006DCBA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +137,7 @@
 		D6538AE929265952006DCBA7 /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
+				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
 				D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */,
 				D91D8B47292FAFED000B1379 /* Info.plist */,
 				D97C4A43292E3C1900192923 /* Model */,
@@ -217,7 +218,6 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
 				D6538AF029265954006DCBA7 /* Preview Content */,
 				D97C4A58292E3DAB00192923 /* TabBar */,
 			);
