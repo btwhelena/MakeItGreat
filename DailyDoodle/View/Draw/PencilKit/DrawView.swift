@@ -7,51 +7,48 @@
 import SwiftUI
 import PencilKit
 
-struct DrawView: View {
 
+//MARK: DRAW SCREEN FOR DAILY CHALLENGES
+struct DrawView: View {
+    
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
     @StateObject private var vm = CloudKitCrudVM()
     @StateObject private var authenticate = CloudKitUser()
-
+    @State var labelHeight = CGFloat.leastNonzeroMagnitude
+    
     var body: some View {
-        ZStack(alignment: .top){
+        ZStack(alignment: .topTrailing){
             CanvasView(canvasView: $canvasView)
                 .background(Color.black)
                 .ignoresSafeArea()
 
-            HStack{
-                Button(action: {
-                    onClearTapped()
-                },
-                       label: {
-                    Image(systemName: "xmark.circle")
+                VStack {
+                    HStack (spacing: 9){
+                        Spacer().frame(width: 150)
+                        CloseButton()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        UndoButton()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        Spacer().frame(width: 170)
+                        OtherButton()
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                        
+                    }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
+                    
+                    Image("snowman")
                         .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.black)
-
-                })
-
-                Spacer().frame(width: 225)
-
-                Button(action: {
-                    onSaved()
-                },
-                       label: {
-                    Image(systemName: "checkmark.circle")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(Color.black)
-
-                })
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 200, height: 120,alignment: .center)
+                        .clipShape(Circle())
+                    
+                }
+                
             }
-
         }
     }
-}
+//}
 
 private extension DrawView {
     func onClearTapped(){
