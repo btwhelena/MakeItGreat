@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0EBFAD292FA8420059B273 /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0EBFAC292FA8420059B273 /* StepperView */; };
+		0B0EBFB0292FA9430059B273 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFAF292FA9430059B273 /* Stepper.swift */; };
+		0B0EBFB2292FAA5E0059B273 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFB1292FAA5E0059B273 /* Step.swift */; };
+		0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */; };
+		0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE02930F8C70059B273 /* LevelView.swift */; };
+		0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE2293104A40059B273 /* DateHelper.swift */; };
+		0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
@@ -22,6 +29,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B0EBFAF292FA9430059B273 /* Stepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stepper.swift; sourceTree = "<group>"; };
+		0B0EBFB1292FAA5E0059B273 /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Step.swift; path = DailyDoodle/Components/Stepper/Step.swift; sourceTree = SOURCE_ROOT; };
+		0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelMap.swift; sourceTree = "<group>"; };
+		0B0EBFE02930F8C70059B273 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		0B0EBFE2293104A40059B273 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateHelper.swift; path = DailyDoodle/Components/LevelMap/DateHelper.swift; sourceTree = SOURCE_ROOT; };
+		0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayChallengeSheet.swift; sourceTree = "<group>"; };
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,12 +55,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFAD292FA8420059B273 /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0EBFAE292FA91A0059B273 /* Stepper */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFAF292FA9430059B273 /* Stepper.swift */,
+				0B0EBFB1292FAA5E0059B273 /* Step.swift */,
+			);
+			path = Stepper;
+			sourceTree = "<group>";
+		};
+		0B0EBFDD2930F8A00059B273 /* LevelMap */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFDE2930F8BA0059B273 /* LevelMap.swift */,
+				0B0EBFE02930F8C70059B273 /* LevelView.swift */,
+			);
+			path = LevelMap;
+			sourceTree = "<group>";
+		};
+		0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */,
+			);
+			path = TodayChallengeSheet;
+			sourceTree = "<group>";
+		};
 		D6538ADE29265952006DCBA7 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +139,7 @@
 		D97C4A44292E3C2F00192923 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */,
 				D97C4A57292E3D4C00192923 /* User */,
 				D97C4A56292E3D3900192923 /* Map */,
 				D97C4A55292E3D2A00192923 /* Gallery */,
@@ -124,6 +165,7 @@
 		D97C4A47292E3C8F00192923 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EBFE2293104A40059B273 /* DateHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -131,6 +173,8 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EBFDD2930F8A00059B273 /* LevelMap */,
+				0B0EBFAE292FA91A0059B273 /* Stepper */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -188,6 +232,9 @@
 			dependencies = (
 			);
 			name = DailyDoodle;
+			packageProductDependencies = (
+				0B0EBFAC292FA8420059B273 /* StepperView */,
+			);
 			productName = DailyDoodle;
 			productReference = D6538AE729265952006DCBA7 /* DailyDoodle.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +263,9 @@
 				Base,
 			);
 			mainGroup = D6538ADE29265952006DCBA7;
+			packageReferences = (
+				0B0EBFAB292FA8420059B273 /* XCRemoteSwiftPackageReference "StepperView" */,
+			);
 			productRefGroup = D6538AE829265952006DCBA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,14 +313,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */,
+				0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */,
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
 				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
+				0B0EBFB2292FAA5E0059B273 /* Step.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
+				0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */,
+				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
+				0B0EBFB0292FA9430059B273 /* Stepper.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 			);
@@ -414,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -444,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -475,6 +531,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B0EBFAB292FA8420059B273 /* XCRemoteSwiftPackageReference "StepperView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B0EBFAC292FA8420059B273 /* StepperView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B0EBFAB292FA8420059B273 /* XCRemoteSwiftPackageReference "StepperView" */;
+			productName = StepperView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6538ADF29265952006DCBA7 /* Project object */;
 }
