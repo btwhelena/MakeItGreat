@@ -11,7 +11,7 @@ struct LevelView: View {
     let label: String
     let position: CGPoint
     let previousPosition: CGPoint
-    var color = Color.mint
+    var color = Color("Secondary")
     var strokeStyle = StrokeStyle(lineWidth: 10, dash: [10])
     var isButtonDisabled: Bool = false
     @State private var showingSheet = false
@@ -24,7 +24,7 @@ struct LevelView: View {
                 path.addLine(to: CGPoint(x: previousPosition.x, y: previousPosition.y + 160))
             }
             .stroke(style: strokeStyle)
-            .foregroundColor(.mint)
+            .foregroundColor(Color("Secondary"))
             Button(action: {action()}) {
                 ZStack {
                     color

@@ -10,10 +10,13 @@ import SwiftUI
 struct MapView: View {
 
     var body: some View {
-        VStack {
-            Spacer()
-                .frame(height: CGFloat(50))
-            LevelMap()
+        ZStack {
+            Color("Primary")
+            VStack {
+                Spacer()
+                    .frame(height: CGFloat(50))
+                LevelMap()
+            }
         }
     }
 }

@@ -51,7 +51,7 @@ class Challenge: Identifiable {
         self.theme = theme
         var currentY = CGFloat(80)
 
-        let color = self.day == DateHelper.getCurrentDay() ? Color.pink : Color.mint
+        let color = self.day == DateHelper.getCurrentDay() ? Color("AccentColor") : Color("Secondary")
         let strokeStyle = self.day <= DateHelper.getCurrentDay() ? StrokeStyle(lineWidth: 10) : StrokeStyle(lineWidth: 10, dash: [10])
         let isButtonDisabled = self.day > DateHelper.getCurrentDay() ? true : false
 
@@ -72,7 +72,7 @@ class Challenge: Identifiable {
         } else {
             let currentPosition = CGPoint(x: CGFloat.random(in: 24...(screenWidth-56)), y: currentY)
 
-            self.view = LevelView(label: String(self.day), position: currentPosition, previousPosition: currentPosition, color: self.day == 10 ? .pink : .mint, strokeStyle: self.day <= 10 ? StrokeStyle(lineWidth: 10) : StrokeStyle(lineWidth: 10, dash: [10]))
+            self.view = LevelView(label: String(self.day), position: currentPosition, previousPosition: currentPosition, color: self.day == 10 ? Color("AccentColor") : Color("Secondary"), strokeStyle: self.day <= 10 ? StrokeStyle(lineWidth: 10) : StrokeStyle(lineWidth: 10, dash: [10]))
 
             Challenge.lastPosition = currentPosition
         }
