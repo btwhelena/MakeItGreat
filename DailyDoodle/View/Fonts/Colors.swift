@@ -9,5 +9,5 @@ import Foundation
 import SwiftUI
 
 enum Theme {
-    static let pinkCTA = Color("CTA")
+    static let pinkCTA = Color("AccentColor")
 }
