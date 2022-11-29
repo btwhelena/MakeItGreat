@@ -29,7 +29,7 @@ struct OtherButton: View {
         .zIndex(10)
 
         SaveButton(open: $open, icon: "checkmark.circle.fill", offsetX: -75, offsetY: 65)
-        SaveButton(open: $open, icon: "square.and.arrow.up.circle.fill", offsetX: -164, offsetY: 120, delay: 0.2)
+        ShareButton(open: $open, icon: "square.and.arrow.up.circle.fill", offsetX: -164, offsetY: 120, delay: 0.2)
 
 
     }
