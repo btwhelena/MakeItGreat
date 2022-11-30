@@ -16,6 +16,7 @@
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
 		0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C6293629F5005C1672 /* ShareButton.swift */; };
+		0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56CF29363B92005C1672 /* StreakCardView.swift */; };
 		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
 		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
@@ -48,6 +49,7 @@
 		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		0D8F56C32930FFB0005C1672 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0D8F56C6293629F5005C1672 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		0D8F56CF29363B92005C1672 /* StreakCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakCardView.swift; sourceTree = "<group>"; };
 		D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCrud.swift; sourceTree = "<group>"; };
 		D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUser.swift; sourceTree = "<group>"; };
 		D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodle.entitlements; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				D97C4A51292E3D0B00192923 /* UserView.swift */,
+				0D8F56CF29363B92005C1672 /* StreakCardView.swift */,
 				D97C4A53292E3D1800192923 /* UserViewController.swift */,
 			);
 			path = User;
@@ -383,6 +386,7 @@
 				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
+				0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */,
 				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
