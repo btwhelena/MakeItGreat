@@ -28,11 +28,13 @@ struct TodayChallengeView: View {
                 VStack {
                     ReferenceImage(width: 400, height: 240)
                     Spacer()
-                    CustomButton(title: "Start Challenge", action: startChallenge)
+                    NavigationLink(destination: DrawView(), isActive: $isActive) {
+                        CustomButton(title: "Start Challenge", action: startChallenge)
+                    }
                     CustomButton(title: "Choose from gallery",
-                        backgroundColor: Color.clear,
-                        foregroundColor: Color.accentColor,
-                        action: chooseFromGallery)
+                                 backgroundColor: Color.clear,
+                                 foregroundColor: Color.accentColor,
+                                 action: chooseFromGallery)
                     .sheet(isPresented: $isImagePickerVisible) {
                         ImagePicker(image: $inputImage)
                     }
@@ -40,12 +42,6 @@ struct TodayChallengeView: View {
                 }
             }
             .toolbar {
-//                ToolbarItem(placement: .cancellationAction) {
-//                    Button(action: dismissSheet) {
-//                        Image(systemName: "xmark")
-//                            .foregroundColor(Color.gray)
-//                    }
-//                }
                 ToolbarItem(placement: .principal) {
                     Text("Today's Challenge")
                         .foregroundColor(Color("Text"))
@@ -54,9 +50,12 @@ struct TodayChallengeView: View {
             .onAppear {
                 isVisible.wrappedValue = false
             }
-            .onDisappear {
-                isVisible.wrappedValue = true
-            }        }
+//            .onDisappear {
+//                withAnimation {
+//                    isVisible.wrappedValue = true
+//                }
+//            }
+        }
     }
 
     func dismissSheet() {
@@ -64,6 +63,7 @@ struct TodayChallengeView: View {
     }
 
     func startChallenge() {
+        isActive.toggle()
     }
 
     func chooseFromGallery() {

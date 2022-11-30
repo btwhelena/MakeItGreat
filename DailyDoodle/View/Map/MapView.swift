@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MapView: View {
 
+    @Environment(\.customBarIsVisible) var isVisible
+
     init() {
         UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
     }
@@ -21,6 +23,11 @@ struct MapView: View {
                     Spacer()
                         .frame(height: CGFloat(50))
                     LevelMap()
+                }
+            }
+            .onAppear {
+                withAnimation {
+                        isVisible.wrappedValue = true
                 }
             }
         }

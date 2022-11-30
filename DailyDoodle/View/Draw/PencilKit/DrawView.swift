@@ -10,7 +10,9 @@ import PencilKit
 
 //MARK: DRAW SCREEN FOR DAILY CHALLENGES
 struct DrawView: View {
-    
+
+    @Environment(\.customBarIsVisible) var isVisible
+
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
@@ -43,6 +45,9 @@ struct DrawView: View {
 
             .navigationBarHidden(true)
             }
+        .onAppear {
+            isVisible.wrappedValue = false
+        }
         }
     }
 //}
