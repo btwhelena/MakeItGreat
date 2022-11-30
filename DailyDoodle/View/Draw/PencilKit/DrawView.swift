@@ -13,7 +13,6 @@ struct DrawView: View {
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
     @StateObject private var vm = CloudKitCrudVM()
-    @StateObject private var authenticate = CloudKitUser()
 
     var body: some View {
         ZStack(alignment: .top){
@@ -68,7 +67,7 @@ private extension DrawView {
             image = canvasView.drawing.image(from: canvasView.bounds, scale: UIScreen.main.scale)
             previewDrawing = canvasView.drawing
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            vm.addItem(image: image)
+            vm.addItem(nameTheme:"Natal", nameDetail:"Velas",image: image)
         }
     }
 }

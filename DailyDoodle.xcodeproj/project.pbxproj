@@ -15,19 +15,17 @@
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
 		D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AF129265954006DCBA7 /* Preview Assets.xcassets */; };
-		D6A3F7062932827300AC5331 /* DrawModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F7052932827300AC5331 /* DrawModel.swift */; };
+		D6A3F7062932827300AC5331 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F7052932827300AC5331 /* BookModel.swift */; };
 		D6A3F7072932860E00AC5331 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
-		D6A3F7082932861100AC5331 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
 		D6A3F70B2932916900AC5331 /* InfiniteCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F70A2932916900AC5331 /* InfiniteCarrousel.swift */; };
 		D6A3F70D293291B000AC5331 /* GeminiTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F70C293291B000AC5331 /* GeminiTitle.swift */; };
 		D6A3F718293296EE00AC5331 /* IsometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F717293296EE00AC5331 /* IsometricView.swift */; };
-		D6A3F71C2932989B00AC5331 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F71B2932989B00AC5331 /* BookModel.swift */; };
-		D6A3F71E2932A12600AC5331 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F71D2932A12600AC5331 /* BookView.swift */; };
+		D6A3F71E2932A12600AC5331 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F71D2932A12600AC5331 /* GalleryView.swift */; };
+		D6B9193E2936479C0082233E /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
+		D6B9194029364DD60082233E /* GalleryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9193F29364DD60082233E /* GalleryDetailView.swift */; };
 		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
 		D97936272930E7570062BCE1 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936262930E7570062BCE1 /* UserController.swift */; };
 		D97936292930E7610062BCE1 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936282930E7610062BCE1 /* Protocol.swift */; };
-		D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A49292E3CC900192923 /* GalleryView.swift */; };
-		D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4B292E3CD700192923 /* GalleryViewController.swift */; };
 		D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4D292E3CEE00192923 /* MapView.swift */; };
 		D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A4F292E3CFA00192923 /* MapViewController.swift */; };
 		D97C4A52292E3D0B00192923 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97C4A51292E3D0B00192923 /* UserView.swift */; };
@@ -48,19 +46,17 @@
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6538AF129265954006DCBA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D6A3F7052932827300AC5331 /* DrawModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawModel.swift; sourceTree = "<group>"; };
+		D6A3F7052932827300AC5331 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		D6A3F70A2932916900AC5331 /* InfiniteCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCarrousel.swift; sourceTree = "<group>"; };
 		D6A3F70C293291B000AC5331 /* GeminiTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiTitle.swift; sourceTree = "<group>"; };
 		D6A3F717293296EE00AC5331 /* IsometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsometricView.swift; sourceTree = "<group>"; };
-		D6A3F71B2932989B00AC5331 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
-		D6A3F71D2932A12600AC5331 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		D6A3F71D2932A12600AC5331 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		D6B9193F29364DD60082233E /* GalleryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailView.swift; sourceTree = "<group>"; };
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
 		D97936262930E7570062BCE1 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		D97936282930E7610062BCE1 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		D97C4A49292E3CC900192923 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
-		D97C4A4B292E3CD700192923 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		D97C4A4D292E3CEE00192923 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D97C4A4F292E3CFA00192923 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D97C4A51292E3D0B00192923 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -151,8 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				D6A3F717293296EE00AC5331 /* IsometricView.swift */,
-				D6A3F71D2932A12600AC5331 /* BookView.swift */,
-				D6A3F71B2932989B00AC5331 /* BookModel.swift */,
 			);
 			path = BookAnimation;
 			sourceTree = "<group>";
@@ -170,7 +164,7 @@
 		D97C4A43292E3C1900192923 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D6A3F7052932827300AC5331 /* DrawModel.swift */,
+				D6A3F7052932827300AC5331 /* BookModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,8 +220,8 @@
 		D97C4A55292E3D2A00192923 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
-				D97C4A49292E3CC900192923 /* GalleryView.swift */,
-				D97C4A4B292E3CD700192923 /* GalleryViewController.swift */,
+				D6A3F71D2932A12600AC5331 /* GalleryView.swift */,
+				D6B9193F29364DD60082233E /* GalleryDetailView.swift */,
 				D6A3F70A2932916900AC5331 /* InfiniteCarrousel.swift */,
 			);
 			path = Gallery;
@@ -321,7 +315,7 @@
 			files = (
 				D6A3F7072932860E00AC5331 /* Gemini Moon.otf in Resources */,
 				D6538AF229265954006DCBA7 /* Preview Assets.xcassets in Resources */,
-				D6A3F7082932861100AC5331 /* Eri Serif.ttf in Resources */,
+				D6B9193E2936479C0082233E /* Eri Serif.ttf in Resources */,
 				D6538AEF29265954006DCBA7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,15 +359,13 @@
 				D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */,
 				D97C4A50292E3CFA00192923 /* MapViewController.swift in Sources */,
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
-				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
-				D6A3F71E2932A12600AC5331 /* BookView.swift in Sources */,
-				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
-				D6A3F71C2932989B00AC5331 /* BookModel.swift in Sources */,
+				D6A3F71E2932A12600AC5331 /* GalleryView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
-				D6A3F7062932827300AC5331 /* DrawModel.swift in Sources */,
+				D6A3F7062932827300AC5331 /* BookModel.swift in Sources */,
 				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
 				D6A3F718293296EE00AC5331 /* IsometricView.swift in Sources */,
+				D6B9194029364DD60082233E /* GalleryDetailView.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
 				0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */,

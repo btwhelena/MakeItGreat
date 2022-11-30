@@ -11,26 +11,30 @@ import CloudKit
 
 class CloudKitCrudVM: ObservableObject {
 
-    @Published var text: String = ""
-    @Published var draw: [DrawModel] = []
+    @Published var draws: [BookModel] = []
+    @Published var selectedDraw: BookModel? = nil
+    var nameTheme : String = ""
+    var nameDetail : String = ""
 
-    init () {
+    init() {
         fetchItems()
     }
 
-    func addItem(image: UIImage?) {
-        let newDraw = CKRecord(recordType: "Draw")
-        newDraw["name"] = newDraw.description
 
+     func addItem(nameTheme: String, nameDetail: String, image: UIImage?){
+        let newDraw = CKRecord(recordType: "Books")
+        newDraw["nameTheme"] = nameTheme
+        newDraw["nameDetail"] = nameDetail
         guard
             let imageURL = image,
             let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(imageURL.description),
             let data = imageURL.pngData() else { return }
 
+
         do {
             try data.write(to: url)
             let asset = CKAsset(fileURL: url)
-            newDraw["image"] = asset
+            newDraw["imageDraw"] = asset
             saveItem(record: newDraw)
         } catch let error {
             print(error)
@@ -38,88 +42,124 @@ class CloudKitCrudVM: ObservableObject {
 
     }
 
-    private func saveItem(record: CKRecord) {
+    private func saveItem(record: CKRecord){
         CKContainer.default().publicCloudDatabase.save(record) { [weak self] returnedRecord, returnedError in
-            print("Record: \(String(describing: returnedRecord))")
-            print("Error: \(String(describing: returnedError))")
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self?.draw = []
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self?.fetchItems()
             }
         }
     }
 
     func fetchItems() {
-
+        //let predicate = NSPredicate(format: "nameTheme = %@", argumentArray: ["Natal"])
         let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "Draw", predicate: predicate)
-        //query.sortDescriptors = [NSSortDescriptor(key: "createdTimestamp", ascending: false)]
-
+        let query = CKQuery(recordType: "Books", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let queryOperation = CKQueryOperation(query: query)
 
-        var returnedItens : [DrawModel] = []
+        var returnedItems: [BookModel] = []
 
         if #available(iOS 15.0, *) {
-            queryOperation.recordMatchedBlock = { (returnedRecordID, returnedResult) in
-
+            queryOperation.recordMatchedBlock = { returnedRecordID, returnedResult in
                 switch returnedResult {
                     case .success(let record):
-                        guard let name = record["name"] as? String else { return }
-                        let image = record["image"] as? CKAsset
-                        let imageURL = image?.fileURL
-                        returnedItens.append(DrawModel(name: name, imageURL: imageURL, record: record))
+                        guard let nameTheme = record["nameTheme"] as? String else {return}
+                        guard let nameDetail = record["nameDetail"] as? String else {return}
+                        let imageAsset = record["imageDraw"] as? CKAsset
+                        let imageURL = imageAsset?.fileURL
+                        returnedItems.append(BookModel(nameTheme: nameTheme, nameDetail: nameDetail, imageURL: imageURL, record: record))
+
+                        break
                     case .failure(let error):
                         print(error)
                 }
             }
         } else {
-            queryOperation.recordFetchedBlock = { (returnedRecord) in
-                guard let name = returnedRecord["name"] as? String else { return }
-                let image = returnedRecord["image"] as? CKAsset
-                let imageURL = image?.fileURL
-                returnedItens.append(DrawModel(name: name, imageURL: imageURL, record: returnedRecord))
+            queryOperation.recordFetchedBlock = { returnedRecord in
+                guard let nameTheme = returnedRecord["nameTheme"] as? String else {
+                    return
+                }
+                guard let nameDetail = returnedRecord["nameDetail"] as? String else {
+                    return
+                }
+                let imageAsset = returnedRecord["imageDraw"] as? CKAsset
+                let imageURL = imageAsset?.fileURL
+                returnedItems.append(BookModel(nameTheme: nameTheme, nameDetail: nameDetail, imageURL: imageURL, record: returnedRecord))
             }
         }
 
-        if #available(iOS 15.0, *){
+
+        if #available(iOS 15.0, *) {
             queryOperation.queryResultBlock = { [weak self] returnedResult in
-                print(returnedResult)
                 DispatchQueue.main.async {
-                    self?.draw = returnedItens
+                    self?.draws = returnedItems
+                    self?.selectedDraw = returnedItems.first
                 }
+
             }
         } else {
-            queryOperation.queryCompletionBlock = { [weak self] (returnedCursor, returnedError) in
-                print("returned queryCompletionBlock")
+            queryOperation.queryCompletionBlock = { [weak self] returnedCursor, returnedError in
                 DispatchQueue.main.async {
-                    self?.draw = returnedItens
+                    self?.draws = returnedItems
                 }
             }
         }
 
-        operationAdd(operation: queryOperation)
+        addOperation(operation: queryOperation)
     }
 
-    func operationAdd(operation: CKDatabaseOperation) {
+    func fetchDrawingsGroupedByTheme() -> Dictionary<String,[BookModel]> {
+        let drawings = CloudKitCrudVM().draws
+        return Dictionary(grouping: drawings, by: { $0.nameTheme })
+    }
+
+    func addOperation(operation: CKDatabaseOperation) {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
-
-    func updateItem(item: DrawModel) {
-        let record = item.record
-        record["name"] = "name"
-        saveItem(record: record)
-    }
-
-    func deleteItem(indexSet: IndexSet) {
-        guard let index = indexSet.first else {return}
-        let drawDelete = draw[index]
-        let record = drawDelete.record
-
-        CKContainer.default().publicCloudDatabase.delete(withRecordID: record.recordID) { [weak self] returnedRecordID, returnedError in
-            DispatchQueue.main.async {
-                self?.draw.remove(at: index)
-            }
-        }
-    }
 }
+
+//struct BookView: View {
+//    @ObservedObject var vm : CloudKitCrudVM
+//
+//    var body: some View {
+//        VStack{
+//            TextField("Add the theme name", text: $vm.nameTheme)
+//                .frame(height: 55)
+//                .padding(.leading)
+//                .background(Color.gray.opacity(0.6))
+//                .cornerRadius(10)
+//
+//            TextField("Add the theme detail name", text: $vm.nameDetail)
+//                .frame(height: 55)
+//                .padding(.leading)
+//                .background(Color.gray.opacity(0.6))
+//                .cornerRadius(10)
+//
+//            Button {
+//
+//            } label: {
+//                Text("Add")
+//                    .frame(width: 100, height: 55)
+//                    .padding(.leading)
+//                    .background(Color.pink.opacity(0.6))
+//                    .cornerRadius(10)
+//            }
+//
+//
+//            List {
+//                ForEach(vm.draws, id: \.self) { book in
+//                    HStack{
+//                        Text(book.nameTheme)
+//                        Text(book.nameDetail)
+//                        if let url = book.imageURL, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
+//                            Image(uiImage: image)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 20, height: 20)
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}

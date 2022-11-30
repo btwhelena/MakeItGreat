@@ -1,9 +1,10 @@
 import SwiftUI
 import CloudKit
 
-struct DrawModel: Hashable, Identifiable {
+struct BookModel: Hashable, Identifiable {
     var id = UUID().uuidString
-    let name: String
+    var nameTheme: String
+    let nameDetail: String
     let imageURL: URL?
     let record: CKRecord
 }
