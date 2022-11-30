@@ -16,16 +16,18 @@ struct TodayChallengeView: View {
     @State var inputImage: UIImage?
     @State var isActive = false
 
-    init(isPresented: Binding<Bool>) {
-        UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
-        self._isPresented = isPresented
-    }
+    @State var image: UIImage = UIImage(named: "snowman")!
+
+//    init(isPresented: Binding<Bool>) {
+//        UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
+//        self._isPresented = isPresented
+//    }
 
     var body: some View {
-        NavigationView {
             ZStack {
                 Color("Primary")
                 VStack {
+                    Spacer()
                     ReferenceImage(width: 400, height: 240)
                     Spacer()
                     NavigationLink(destination: DrawView(), isActive: $isActive) {
@@ -45,17 +47,19 @@ struct TodayChallengeView: View {
                 ToolbarItem(placement: .principal) {
                     Text("Today's Challenge")
                         .foregroundColor(Color("Text"))
+                        .font(.custom(FontsManager.Eri_Serif.regular, size: 17))
                 }
             }
+            .ignoresSafeArea(.all, edges: .all)
             .onAppear {
                 isVisible.wrappedValue = false
+                image = UIImage(named: "snowman")!
             }
 //            .onDisappear {
 //                withAnimation {
 //                    isVisible.wrappedValue = true
 //                }
 //            }
-        }
     }
 
     func dismissSheet() {

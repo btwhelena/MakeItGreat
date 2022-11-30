@@ -25,6 +25,7 @@ struct MapView: View {
                     LevelMap()
                 }
             }
+            .ignoresSafeArea(.all, edges: .all)
             .onAppear {
                 withAnimation {
                         isVisible.wrappedValue = true

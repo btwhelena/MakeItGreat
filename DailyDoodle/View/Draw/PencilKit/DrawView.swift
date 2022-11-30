@@ -12,6 +12,7 @@ import PencilKit
 struct DrawView: View {
 
     @Environment(\.customBarIsVisible) var isVisible
+    @Environment(\.presentationMode) var presentation
 
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
@@ -29,7 +30,7 @@ struct DrawView: View {
                 VStack {
                     HStack (spacing: 9){
                         Spacer().frame(width: 150)
-                        CloseButton()
+                        CloseButton(action: onCloseTapped)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         UndoButton()
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -53,6 +54,9 @@ struct DrawView: View {
 //}
 
 private extension DrawView {
+    func onCloseTapped() {
+        presentation.wrappedValue.dismiss()
+    }
     func onClearTapped(){
         canvasView.drawing = PKDrawing()
     }

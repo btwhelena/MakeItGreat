@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct CloseButton: View {
+    var action: () -> Void
     var body: some View {
-        Button(action: {
-
-        },
+        Button(action: action,
                label: {
             Image(systemName: "xmark.circle")
                 .resizable()
@@ -25,6 +24,6 @@ struct CloseButton: View {
 
 struct CloseButton_Previews: PreviewProvider {
     static var previews: some View {
-        CloseButton()
+        CloseButton(action: {})
     }
 }

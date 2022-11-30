@@ -16,6 +16,8 @@
 		0B0EBFEE29364A9C0059B273 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFED29364A9C0059B273 /* CustomButton.swift */; };
 		0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFF029364E920059B273 /* ImagePicker.swift */; };
 		0B0EBFF4293790C70059B273 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0EBFF3293790C70059B273 /* Introspect */; };
+		0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
+		0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
 		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
@@ -367,6 +369,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */,
+				0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */,
 				0B0EBFE82934EF2F0059B273 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
