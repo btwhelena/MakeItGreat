@@ -37,14 +37,11 @@ struct DrawView: View {
                         
                     }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
                     
-                    Image("snowman")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200, height: 120,alignment: .center)
-                        .clipShape(Circle())
+                    ReferenceImage()
                     
                 }
-                
+
+            .navigationBarHidden(true)
             }
         }
     }

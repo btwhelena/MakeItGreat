@@ -10,6 +10,7 @@ import SwiftUI
 struct LevelMap: View {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight = UIScreen.main.bounds.height
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
