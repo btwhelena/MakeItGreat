@@ -23,10 +23,6 @@ struct MapView: View {
                     LevelMap()
                 }
             }
-
-//            NavigationLink(destination: DrawView(), isActive: .constant(true)) {
-//                EmptyView()
-//            }
         }
     }
 }

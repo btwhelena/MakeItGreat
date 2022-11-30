@@ -26,10 +26,12 @@ struct LevelView: View {
                 }
                 .stroke(style: strokeStyle)
                 .foregroundColor(Color("Secondary"))
-                Button(action: {action()}) {
-                    ZStack {
-                        color
-                        Text(label).foregroundColor(.white)
+                NavigationLink(destination: TodayChallengeView(isPresented: $isPresented), isActive: $isPresented) {
+                    Button(action: {action()}) {
+                        ZStack {
+                            color
+                            Text(label).foregroundColor(.white)
+                        }
                     }
                 }
                 .disabled(isButtonDisabled)
@@ -37,9 +39,9 @@ struct LevelView: View {
                 .cornerRadius(24)
                 .position(position)
                 .padding([.vertical], 32)
-                .sheet(isPresented: $isPresented) {
-                    TodayChallengeView(isPresented: $isPresented)
-                }
+//                .sheet(isPresented: $isPresented) {
+//                    TodayChallengeView(isPresented: $isPresented)
+//                }
 
             }
     }

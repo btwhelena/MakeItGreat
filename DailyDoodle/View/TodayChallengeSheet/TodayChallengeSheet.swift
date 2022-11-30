@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TodayChallengeView: View {
+
+    @Environment(\.customBarIsVisible) var isVisible
+
     @Binding var isPresented: Bool
     @State var isImagePickerVisible = false
     @State var inputImage: UIImage?
@@ -37,18 +40,23 @@ struct TodayChallengeView: View {
                 }
             }
             .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(action: dismissSheet) {
-                        Image(systemName: "xmark")
-                            .foregroundColor(Color.gray)
-                    }
-                }
+//                ToolbarItem(placement: .cancellationAction) {
+//                    Button(action: dismissSheet) {
+//                        Image(systemName: "xmark")
+//                            .foregroundColor(Color.gray)
+//                    }
+//                }
                 ToolbarItem(placement: .principal) {
                     Text("Today's Challenge")
                         .foregroundColor(Color("Text"))
                 }
             }
-        }
+            .onAppear {
+                isVisible.wrappedValue = false
+            }
+            .onDisappear {
+                isVisible.wrappedValue = true
+            }        }
     }
 
     func dismissSheet() {
