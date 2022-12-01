@@ -12,8 +12,12 @@ struct GalleryDetailView: View {
     @StateObject var vm = CloudKitCrudVM()
 
     var body: some View {
-        GeminiTitle(title: book.nameTheme)
-            .padding(.top, 20)
-        InfiniteCarrousel(book: book)
+        ZStack {
+            Color("Primary")
+                GeminiTitle(title: book.nameTheme)
+                    .padding(.top, 20)
+                InfiniteCarrousel(book: book)
+        }
+        .ignoresSafeArea(.all, edges: .all)
     }
 }

@@ -74,7 +74,14 @@ class Challenge: Identifiable {
         } else {
             let currentPosition = CGPoint(x: CGFloat.random(in: 24...(screenWidth-56)), y: currentY)
 
-            self.view = LevelView(label: String(self.day), position: currentPosition, previousPosition: currentPosition, color: self.day == 10 ? Color("AccentColor") : Color("Secondary"), strokeStyle: self.day <= 10 ? StrokeStyle(lineWidth: 10) : StrokeStyle(lineWidth: 10, dash: [10]))
+
+            self.view = LevelView(
+                label: String(self.day),
+                position: currentPosition,
+                previousPosition: currentPosition,
+                color: color,
+                strokeStyle: strokeStyle,
+                isButtonDisabled: isButtonDisabled)
 
             Challenge.lastPosition = currentPosition
         }

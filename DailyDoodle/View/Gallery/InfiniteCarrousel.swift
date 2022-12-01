@@ -59,6 +59,9 @@ struct InfiniteCarrousel: View {
         .tabViewStyle(.page(indexDisplayMode: .never))
         .frame(height: 500)
         .padding(.bottom, 100)
+        .background {
+            Color("Primary")
+        }
     }
 
     func indexOf(book: BookModel) -> Int {

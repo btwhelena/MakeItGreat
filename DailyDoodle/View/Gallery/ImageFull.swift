@@ -14,7 +14,10 @@ struct ImageFull: View {
 
     var body: some View {
         NavigationView {
-            FullPictureView(imagePath: image)
+            ZStack {
+                    FullPictureView(imagePath: image)
+            }
+            .ignoresSafeArea(.all, edges: .all)
         }
         .navigationTitle(book.nameDetail)
         .font(.custom("Eri Serif", size: 16))

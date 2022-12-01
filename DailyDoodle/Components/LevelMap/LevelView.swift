@@ -30,7 +30,8 @@ struct LevelView: View {
                     Button(action: {action()}) {
                         ZStack {
                             color
-                            Text(label).foregroundColor(.white)
+                            Text(label)
+                                .foregroundColor(Color("Primary"))
                         }
                     }
                 }

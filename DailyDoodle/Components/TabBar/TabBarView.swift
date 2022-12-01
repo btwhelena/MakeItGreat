@@ -76,15 +76,15 @@ struct TabBar: View {
                                 .renderingMode(.template)
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 50, height: 40)
-                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color(red: 255/255, green: 97/255, blue: 134/255))
+                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color.accentColor)
                                 .padding(selectedtab == image  ? 10 : 0)
-                                .background(Color(red: 255/255, green: 97/255, blue: 134/255).opacity(selectedtab == image  ? 1 : 0).clipShape(Circle()))
+                                .background(Color.accentColor.opacity(selectedtab == image  ? 1 : 0).clipShape(Circle()))
                                 .matchedGeometryEffect(id: image, in: animation)
                                 .offset(x: selectedtab == image ? (proxy.frame(in: .global).minX - proxy.frame(in: .global).midX) : 0, y: selectedtab == image  ? -60 : 0)
 
                             if selectedtab != image {
                                 Text(image)
-                                    .foregroundColor(Color(red: 255/255, green: 97/255, blue: 134/255))
+                                    .foregroundColor(Color.accentColor)
                                     .font(.custom(FontsManager.Eri_Serif.regular, size: 13))
                                     .fixedSize()
                             }
@@ -104,7 +104,7 @@ struct TabBar: View {
         }
         .padding(.horizontal, 30)
         .padding(.vertical)
-        .background(Color(.white).clipShape(CustomShape(xAxis: xAxis)).cornerRadius(25))
+        .background(Color("HeaderTitle").clipShape(CustomShape(xAxis: xAxis)).cornerRadius(25))
         .shadow(radius: 4)
         .padding(.horizontal)
 
