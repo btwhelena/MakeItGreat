@@ -15,6 +15,7 @@ struct GalleryView: View {
         NavigationView{
             VStack {
                 GeminiTitle(title: "Galeria")
+                    .padding(.top, 50)
                 BookSlider()
                 GalleryThemeView()
                     .padding(.bottom, 50)
