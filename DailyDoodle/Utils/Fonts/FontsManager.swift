@@ -14,6 +14,6 @@ struct FontsManager {
     }
 
     struct Gemini_Moon {
-        static let regular = "GeminiMoon"
+        static let regular = "Gemini Moon"
     }
 }
