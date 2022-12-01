@@ -11,17 +11,20 @@ struct GalleryView: View {
     @StateObject var vm = CloudKitCrudVM()
 
     var body: some View {
+            NavigationView{
+                ZStack {
+                    Color("Primary")
+                VStack {
+                    GeminiTitle(title: "Galeria")
+                        .padding(.top, 50)
+                    BookSlider()
+                    GalleryThemeView()
+                        .padding(.bottom, 50)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
-        NavigationView{
-            VStack {
-                GeminiTitle(title: "Galeria")
-                    .padding(.top, 50)
-                BookSlider()
-                GalleryThemeView()
-                    .padding(.bottom, 50)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-
+                .ignoresSafeArea(.all, edges: .all)
         }
     }
 
@@ -69,9 +72,6 @@ struct GalleryView: View {
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
-        .background {
-            Color.white.opacity(0.6)
-        }
     }
 
     @ViewBuilder

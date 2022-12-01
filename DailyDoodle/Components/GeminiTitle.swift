@@ -14,7 +14,7 @@ struct GeminiTitle: View {
     var body: some View {
         Text(title)
             .font(.custom("Gemini Moon", size: 38))
-            .foregroundColor(.black)
+            .foregroundColor(Color("HeaderTitle"))
             .frame(alignment: .top)
     }
 }
