@@ -12,10 +12,16 @@
 		0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE2293104A40059B273 /* DateHelper.swift */; };
 		0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */; };
 		0B0EBFE82934EF2F0059B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
+		0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C6293629F5005C1672 /* ShareButton.swift */; };
+		0B0EBFEB293631020059B273 /* ReferenceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFEA293631020059B273 /* ReferenceImage.swift */; };
+		0B0EBFEE29364A9C0059B273 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFED29364A9C0059B273 /* CustomButton.swift */; };
+		0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFF029364E920059B273 /* ImagePicker.swift */; };
+		0B0EBFF4293790C70059B273 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0EBFF3293790C70059B273 /* Introspect */; };
+		0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
+		0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
 		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
-		0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C6293629F5005C1672 /* ShareButton.swift */; };
 		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
 		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
@@ -43,6 +49,9 @@
 		0B0EBFE02930F8C70059B273 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 		0B0EBFE2293104A40059B273 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateHelper.swift; path = DailyDoodle/Components/LevelMap/DateHelper.swift; sourceTree = SOURCE_ROOT; };
 		0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayChallengeSheet.swift; sourceTree = "<group>"; };
+		0B0EBFEA293631020059B273 /* ReferenceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceImage.swift; sourceTree = "<group>"; };
+		0B0EBFED29364A9C0059B273 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0B0EBFF029364E920059B273 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gemini Moon.otf"; sourceTree = "<group>"; };
 		0D8F56BF2930E9D0005C1672 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFF4293790C70059B273 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,30 @@
 				0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */,
 			);
 			path = TodayChallengeSheet;
+			sourceTree = "<group>";
+		};
+		0B0EBFE9293630EF0059B273 /* ReferenceImage */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFEA293631020059B273 /* ReferenceImage.swift */,
+			);
+			path = ReferenceImage;
+			sourceTree = "<group>";
+		};
+		0B0EBFEC29364A880059B273 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFED29364A9C0059B273 /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		0B0EBFEF29364E750059B273 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0B0EBFF029364E920059B273 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		0D8F56BD2930E9B0005C1672 /* Draw */ = {
@@ -190,6 +224,7 @@
 		D97C4A44292E3C2F00192923 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EBFEF29364E750059B273 /* ImagePicker */,
 				0D8F56BD2930E9B0005C1672 /* Draw */,
 				0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */,
 				D97C4A57292E3D4C00192923 /* User */,
@@ -228,6 +263,8 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0B0EBFEC29364A880059B273 /* CustomButton */,
+				0B0EBFE9293630EF0059B273 /* ReferenceImage */,
 				D97C4A58292E3DAB00192923 /* TabBar */,
 				0B0EBFDD2930F8A00059B273 /* LevelMap */,
 			);
@@ -288,6 +325,7 @@
 			);
 			name = DailyDoodle;
 			packageProductDependencies = (
+				0B0EBFF3293790C70059B273 /* Introspect */,
 			);
 			productName = DailyDoodle;
 			productReference = D6538AE729265952006DCBA7 /* DailyDoodle.app */;
@@ -318,6 +356,7 @@
 			);
 			mainGroup = D6538ADE29265952006DCBA7;
 			packageReferences = (
+				0B0EBFF2293790C70059B273 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = D6538AE829265952006DCBA7 /* Products */;
 			projectDirPath = "";
@@ -333,6 +372,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */,
+				0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */,
 				0B0EBFE82934EF2F0059B273 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0EBFEB293631020059B273 /* ReferenceImage.swift in Sources */,
 				0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */,
 				0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */,
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
@@ -378,6 +420,7 @@
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
 				D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */,
 				D97C4A4C292E3CD700192923 /* GalleryViewController.swift in Sources */,
+				0B0EBFEE29364A9C0059B273 /* CustomButton.swift in Sources */,
 				D9A172FA2932DBE9000B3DFF /* CloseButton.swift in Sources */,
 				0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */,
 				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
@@ -386,6 +429,7 @@
 				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
 				D97C4A4A292E3CC900192923 /* GalleryView.swift in Sources */,
+				0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */,
 				D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
@@ -604,6 +648,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0B0EBFF2293790C70059B273 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B0EBFF3293790C70059B273 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0B0EBFF2293790C70059B273 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D6538ADF29265952006DCBA7 /* Project object */;
 }

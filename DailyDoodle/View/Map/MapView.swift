@@ -9,11 +9,28 @@ import SwiftUI
 
 struct MapView: View {
 
+    @Environment(\.customBarIsVisible) var isVisible
+
+    init() {
+        UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
+    }
+    
     var body: some View {
-        VStack {
-            Spacer()
-                .frame(height: CGFloat(50))
-            LevelMap()
+        NavigationView {
+            ZStack {
+                Color("Primary")
+                VStack {
+                    Spacer()
+                        .frame(height: CGFloat(50))
+                    LevelMap()
+                }
+            }
+            .ignoresSafeArea(.all, edges: .all)
+            .onAppear {
+                withAnimation {
+                        isVisible.wrappedValue = true
+                }
+            }
         }
     }
 }

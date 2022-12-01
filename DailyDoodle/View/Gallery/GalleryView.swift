@@ -9,7 +9,10 @@ import SwiftUI
 
 struct GalleryView: View {
     var body: some View {
-        Text("Hey")
+        ZStack {
+            Color("Primary")
+            Text("Hey")
+        }
     }
 }
 

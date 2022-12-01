@@ -5,12 +5,26 @@
 //  Created by Maria Letícia Dutra de Oliveira on 23/11/22.
 
 import SwiftUI
+import Introspect
+
+struct CustomBarVisibilityKey: EnvironmentKey {
+    static let defaultValue = Binding(get: { true }, set: { _ in })
+}
+
+extension EnvironmentValues {
+    var customBarIsVisible: Binding<Bool> {
+        get { self[CustomBarVisibilityKey.self] }
+        set { self[CustomBarVisibilityKey.self] = newValue }
+    }
+}
 
 //TAB BAR ANIMADA
 struct TabBar: View {
     @State var selectedtab = "map"
     @State var xAxis: CGFloat = 0
     @Namespace var animation
+
+    @State var customTabBarIsVisible = true
 
     var body: some View {
         ZStack (
@@ -31,58 +45,70 @@ struct TabBar: View {
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("profile")
             }
+            .environment(\.customBarIsVisible, $customTabBarIsVisible)
 
             //MARK: Configurações de imagens e botões para o que estiver selecionado
-            HStack(spacing: 0) {
-                ForEach(icons, id: \.self){ image in
-                    GeometryReader { proxy in
-                        Button(action: {
-                            withAnimation(.spring()){
-                                selectedtab = image
-                                xAxis = proxy.frame(in: .global).minX
-                            }
-                        }, label: {
-                            VStack {
-                                Image(image)
-                                    .resizable()
-                                    .renderingMode(.template)
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 50, height: 40)
-                                    .foregroundColor(selectedtab == image ? getColor(image: image) : Color(red: 255/255, green: 97/255, blue: 134/255))
-                                    .padding(selectedtab == image  ? 10 : 0)
-                                    .background(Color(red: 255/255, green: 97/255, blue: 134/255).opacity(selectedtab == image  ? 1 : 0).clipShape(Circle()))
-                                    .matchedGeometryEffect(id: image, in: animation)
-                                    .offset(x: selectedtab == image ? (proxy.frame(in: .global).minX - proxy.frame(in: .global).midX) : 0, y: selectedtab == image  ? -60 : 0)
-
-                                if selectedtab != image {
-                                    Text(image)
-                                        .foregroundColor(Color(red: 255/255, green: 97/255, blue: 134/255))
-                                        .font(.custom(FontsManager.Eri_Serif.regular, size: 13))
-                                        .fixedSize()
-                                }
-                            }.frame(height: 45)
-
-                    })
-                        .onAppear(perform: {
-                            if image == icons[1] {
-                                xAxis = proxy.frame(in: .global).minX
-                            }
-                        })
-                    }
-                    .frame(width: 40, height: 40)
-
-                    if image != icons.last { Spacer(minLength: 0) }
-                }
+            if customTabBarIsVisible {
+                makeCustomTabBar()
             }
-            .padding(.horizontal, 30)
-            .padding(.vertical)
-            .background(Color(.white).clipShape(CustomShape(xAxis: xAxis)).cornerRadius(25))
-            .shadow(radius: 4)
-            .padding(.horizontal)
 
-            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
         }
         .ignoresSafeArea(.all, edges: .bottom)
+
+        .introspectTabBarController { (UITabBarController) in
+            UITabBarController.tabBar.isHidden = true
+        }
+    }
+
+    func makeCustomTabBar() -> some View {
+        HStack(spacing: 0) {
+            ForEach(icons, id: \.self){ image in
+                GeometryReader { proxy in
+                    Button(action: {
+                        withAnimation(.spring()){
+                            selectedtab = image
+                            xAxis = proxy.frame(in: .global).minX
+                        }
+                    }, label: {
+                        VStack {
+                            Image(image)
+                                .resizable()
+                                .renderingMode(.template)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50, height: 40)
+                                .foregroundColor(selectedtab == image ? getColor(image: image) : Color(red: 255/255, green: 97/255, blue: 134/255))
+                                .padding(selectedtab == image  ? 10 : 0)
+                                .background(Color(red: 255/255, green: 97/255, blue: 134/255).opacity(selectedtab == image  ? 1 : 0).clipShape(Circle()))
+                                .matchedGeometryEffect(id: image, in: animation)
+                                .offset(x: selectedtab == image ? (proxy.frame(in: .global).minX - proxy.frame(in: .global).midX) : 0, y: selectedtab == image  ? -60 : 0)
+
+                            if selectedtab != image {
+                                Text(image)
+                                    .foregroundColor(Color(red: 255/255, green: 97/255, blue: 134/255))
+                                    .font(.custom(FontsManager.Eri_Serif.regular, size: 13))
+                                    .fixedSize()
+                            }
+                        }.frame(height: 45)
+
+                })
+                    .onAppear(perform: {
+                        if image == icons[1] {
+                            xAxis = proxy.frame(in: .global).minX
+                        }
+                    })
+                }
+                .frame(width: 40, height: 40)
+
+                if image != icons.last { Spacer(minLength: 0) }
+            }
+        }
+        .padding(.horizontal, 30)
+        .padding(.vertical)
+        .background(Color(.white).clipShape(CustomShape(xAxis: xAxis)).cornerRadius(25))
+        .shadow(radius: 4)
+        .padding(.horizontal)
+
+        .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
     }
 
     func getColor(image: String) -> Color{

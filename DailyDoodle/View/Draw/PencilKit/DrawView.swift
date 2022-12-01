@@ -10,7 +10,10 @@ import PencilKit
 
 //MARK: DRAW SCREEN FOR DAILY CHALLENGES
 struct DrawView: View {
-    
+
+    @Environment(\.customBarIsVisible) var isVisible
+    @Environment(\.presentationMode) var presentation
+
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
@@ -27,7 +30,7 @@ struct DrawView: View {
                 VStack {
                     HStack (spacing: 9){
                         Spacer().frame(width: 150)
-                        CloseButton()
+                        CloseButton(action: onCloseTapped)
                             .frame(maxWidth: .infinity, alignment: .leading)
                         UndoButton()
                             .frame(maxWidth: .infinity, alignment: .leading)
@@ -37,20 +40,23 @@ struct DrawView: View {
                         
                     }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
                     
-                    Image("snowman")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 200, height: 120,alignment: .center)
-                        .clipShape(Circle())
+                    ReferenceImage()
                     
                 }
-                
+
+            .navigationBarHidden(true)
             }
+        .onAppear {
+            isVisible.wrappedValue = false
+        }
         }
     }
 //}
 
 private extension DrawView {
+    func onCloseTapped() {
+        presentation.wrappedValue.dismiss()
+    }
     func onClearTapped(){
         canvasView.drawing = PKDrawing()
     }
