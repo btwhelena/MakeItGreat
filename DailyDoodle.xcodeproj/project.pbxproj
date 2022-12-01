@@ -11,17 +11,17 @@
 		0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE02930F8C70059B273 /* LevelView.swift */; };
 		0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE2293104A40059B273 /* DateHelper.swift */; };
 		0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFE5293109210059B273 /* TodayChallengeSheet.swift */; };
-		0B0EBFE82934EF2F0059B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6538AEE29265954006DCBA7 /* Assets.xcassets */; };
-		0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C6293629F5005C1672 /* ShareButton.swift */; };
 		0B0EBFEB293631020059B273 /* ReferenceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFEA293631020059B273 /* ReferenceImage.swift */; };
 		0B0EBFEE29364A9C0059B273 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFED29364A9C0059B273 /* CustomButton.swift */; };
 		0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0EBFF029364E920059B273 /* ImagePicker.swift */; };
 		0B0EBFF4293790C70059B273 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0EBFF3293790C70059B273 /* Introspect */; };
 		0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
 		0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
+		0B0EC0022938E4410059B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0EC0012938E4410059B273 /* Assets.xcassets */; };
 		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
+		0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C6293629F5005C1672 /* ShareButton.swift */; };
 		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
 		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
@@ -52,6 +52,7 @@
 		0B0EBFEA293631020059B273 /* ReferenceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceImage.swift; sourceTree = "<group>"; };
 		0B0EBFED29364A9C0059B273 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0B0EBFF029364E920059B273 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		0B0EC0012938E4410059B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gemini Moon.otf"; sourceTree = "<group>"; };
 		0D8F56BF2930E9D0005C1672 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D6538AEE29265954006DCBA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Components/Assets.xcassets; sourceTree = "<group>"; };
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 		D6538AE929265952006DCBA7 /* DailyDoodle */ = {
 			isa = PBXGroup;
 			children = (
-				D6538AEE29265954006DCBA7 /* Assets.xcassets */,
 				D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */,
+				0B0EC0012938E4410059B273 /* Assets.xcassets */,
 				D91D8B47292FAFED000B1379 /* Info.plist */,
 				D97C4A43292E3C1900192923 /* Model */,
 				D97C4A44292E3C2F00192923 /* View */,
@@ -373,8 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */,
+				0B0EC0022938E4410059B273 /* Assets.xcassets in Resources */,
 				0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */,
-				0B0EBFE82934EF2F0059B273 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +584,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -618,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Ieda.DailyDoodle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DailyDoodle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
