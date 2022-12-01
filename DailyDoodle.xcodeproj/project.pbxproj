@@ -157,6 +157,23 @@
 			path = BookAnimation;
 			sourceTree = "<group>";
 		};
+		D6E035602938E3BB0061C6AE /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
+				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
+		D6E035612938E3D10061C6AE /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		D91D8B49292FB0BD000B1379 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,11 +233,10 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6E035612938E3D10061C6AE /* Style */,
+				D6E035602938E3BB0061C6AE /* PictureView */,
 				D6A3F70E293294DF00AC5331 /* BookAnimation */,
 				D97C4A58292E3DAB00192923 /* TabBar */,
-				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
-				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
-				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
