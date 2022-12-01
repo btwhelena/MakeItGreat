@@ -12,37 +12,39 @@ struct UserView: View {
     @State var vm = CloudKitUser()
 
     var body: some View {
-        ZStack {
-            Circle()
-                .fill(Theme.pinkCTA)
-                .frame(width: 900, height: 900)
-                .position(x: 200, y: -250)
+        ZStack (alignment: .top){
+            Color(red: 255/255, green: 252/255, blue: 230/255)
 
-            VStack{
-                Image("snowman")
+            Image("PinkBack")
+                .resizable()
+                .scaledToFit()
+
+            VStack {
+                Spacer().frame(height: 90)
+
+                Image("avatar")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height: 150)
                     .clipShape(Circle())
                     .shadow(radius: 4)
 
-                //Text("\(vm.userName)")
-                Text("Jorge")
+                Text("\(vm.userName)")
+//                Text("Jorge")
                     .padding(.top, 10)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.black)
-                    .font(.custom(FontsManager.Eri_Serif.regular, size: 24))
+                    .foregroundColor(Color(red: 22/255, green: 80/255, blue: 80/255))
+                    .font(.custom(FontsManager.Eri_Serif.regular, size: 26))
+
+                Spacer().frame(height: 70)
 
                 HStack {
                     StreakCardView(title: "Streak Atual", streak: 10)
-                    Spacer().frame(width: 50)
+                    Spacer().frame(width: 30)
                     StreakCardView(title: "Maior Streak", streak: 13)
                 }
             }
-
-
-
-        }.background(Color(red: 255/255, green: 252/255, blue: 230/255))
+        }.ignoresSafeArea(.all)
 
     }
 }
