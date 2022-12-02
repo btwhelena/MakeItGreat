@@ -17,28 +17,30 @@ class CloudKitCrudVM: ObservableObject {
     var nameDetail : String = ""
 
     init() {
-        fetchItems()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.fetchItems()
+        }
     }
 
-
      func addItem(nameTheme: String, nameDetail: String, image: UIImage?){
-        let newDraw = CKRecord(recordType: "Books")
-        newDraw["nameTheme"] = nameTheme
-        newDraw["nameDetail"] = nameDetail
-        guard
-            let imageURL = image,
-            let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(imageURL.description),
-            let data = imageURL.jpegData(compressionQuality: 1.0) else { return }
+
+             let newDraw = CKRecord(recordType: "Books")
+             newDraw["nameTheme"] = nameTheme
+             newDraw["nameDetail"] = nameDetail
+             guard
+                let imageURL = image,
+                let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.appendingPathComponent(imageURL.description),
+                let data = imageURL.pngData() else { return }
 
 
-        do {
-            try data.write(to: url)
-            let asset = CKAsset(fileURL: url)
-            newDraw["imageDraw"] = asset
-            saveItem(record: newDraw)
-        } catch let error {
-            print(error)
-        }
+             do {
+                 try data.write(to: url)
+                 let asset = CKAsset(fileURL: url)
+                 newDraw["imageDraw"] = asset
+                 saveItem(record: newDraw)
+             } catch let error {
+                 print(error)
+             }
 
     }
 
@@ -51,7 +53,7 @@ class CloudKitCrudVM: ObservableObject {
     }
 
     func fetchItems() {
-        
+        //let predicate = NSPredicate(format: "nameTheme = %@", argumentArray: ["Natal"])
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Books", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
@@ -110,5 +112,51 @@ class CloudKitCrudVM: ObservableObject {
 
     func addOperation(operation: CKDatabaseOperation) {
         CKContainer.default().publicCloudDatabase.add(operation)
+    }
+}
+
+struct BookView: View {
+    @ObservedObject var vm : CloudKitCrudVM
+
+    var body: some View {
+        VStack{
+            TextField("Add the theme name", text: $vm.nameTheme)
+                .frame(height: 55)
+                .padding(.leading)
+                .background(Color.gray.opacity(0.6))
+                .cornerRadius(10)
+
+            TextField("Add the theme detail name", text: $vm.nameDetail)
+                .frame(height: 55)
+                .padding(.leading)
+                .background(Color.gray.opacity(0.6))
+                .cornerRadius(10)
+
+            Button {
+
+            } label: {
+                Text("Add")
+                    .frame(width: 100, height: 55)
+                    .padding(.leading)
+                    .background(Color.pink.opacity(0.6))
+                    .cornerRadius(10)
+            }
+
+
+            List {
+                ForEach(vm.draws, id: \.self) { book in
+                    HStack{
+                        Text(book.nameTheme)
+                        Text(book.nameDetail)
+                        if let url = book.imageURL, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
