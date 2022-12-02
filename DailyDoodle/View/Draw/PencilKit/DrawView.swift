@@ -17,6 +17,7 @@ struct DrawView: View {
     @State private var canvasView = PKCanvasView()
     @State private var image: UIImage = UIImage()
     @State var previewDrawing: PKDrawing? = nil
+
     @StateObject private var vm = CloudKitCrudVM()
     @State var labelHeight = CGFloat.leastNonzeroMagnitude
     
