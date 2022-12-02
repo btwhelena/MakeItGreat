@@ -11,7 +11,7 @@ struct ReferenceImage: View {
     var width: CGFloat = 200
     var height: CGFloat = 120
 
-    @State var image: UIImage? = UIImage(named: "snowman")!
+    @State var image: UIImage? = UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!
 
     var body: some View {
         if let image {
@@ -24,7 +24,7 @@ struct ReferenceImage: View {
             Text("Loading Image")
                 .task {
                     DispatchQueue.main.async {
-                        image = UIImage(named: "snowman")!
+                        image = UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!
                     }
                 }
         }

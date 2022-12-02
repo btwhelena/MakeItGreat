@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct LevelMap: View {
-    
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
+
+    private let initialPosition = "challenge-\(DateHelper.getCurrentDay())"
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                Spacer()
-                    .frame(height: CGFloat(200))
-                ForEach(Challenge.mockedChallenges.reversed()) { challenge in
-                    challenge.view
+        VStack {
+//            Spacer()
+//                .frame(height: CGFloat(50))
+
+                ScrollViewReader { proxy in
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            ForEach(Challenge.mockedChallenges.reversed()) { challenge in
+                                challenge.view
+                            }
+                            Spacer()
+                                .frame(height: CGFloat(200))
+                        }
+                    }
+                    .onAppear {
+                        proxy.scrollTo(initialPosition)
+                    }
                 }
-                Spacer()
-                    .frame(height: CGFloat(200))
-            }
-            .frame(width: screenWidth)
         }
     }
 
@@ -43,22 +49,24 @@ class Challenge: Identifiable {
     static var createdDays: Int = 0
     static var lastPosition: CGPoint?
     var day: Int = 0
-    var theme: String
     let view: LevelView
+    var isCurrentDay: Bool
 
-    init(_ theme: String) {
+    init() {
         let screenWidth = UIScreen.main.bounds.width
         Challenge.createdDays += 1
         self.day = Challenge.createdDays
-        self.theme = theme
-        var currentY = CGFloat(80)
+        let currentDay = DateHelper.getCurrentDay()
+        self.isCurrentDay = self.day == currentDay
+        //        let initialPosition = CGFloat(300)
+        var currentY = CGFloat(80) //initialPosition * CGFloat(currentDay - self.day)
 
         let color = self.day == DateHelper.getCurrentDay() ? Color("AccentColor") : Color("Secondary")
         let strokeStyle = self.day <= DateHelper.getCurrentDay() ? StrokeStyle(lineWidth: 10) : StrokeStyle(lineWidth: 10, dash: [10])
         let isButtonDisabled = self.day > DateHelper.getCurrentDay() ? true : false
 
         if Challenge.lastPosition != nil {
-            currentY = Challenge.lastPosition!.y - 8
+            currentY = Challenge.lastPosition!.y
 
             let currentPosition = CGPoint(x: CGFloat.random(in: 24...(screenWidth-56)), y: currentY)
 
@@ -74,7 +82,6 @@ class Challenge: Identifiable {
         } else {
             let currentPosition = CGPoint(x: CGFloat.random(in: 24...(screenWidth-56)), y: currentY)
 
-
             self.view = LevelView(
                 label: String(self.day),
                 position: currentPosition,
@@ -88,37 +95,16 @@ class Challenge: Identifiable {
 
     }
 
-    static let mockedChallenges = [
-        Challenge("Cactus"),
-        Challenge("Venus Fly Trap"),
-        Challenge("Willow Tree"),
-        Challenge("Rose"),
-        Challenge("Amanita Mushroom"),
-        Challenge("Daisy"),
-        Challenge("Lily Pad"),
-        Challenge("Saint George's sword"),
-        Challenge("Echeveria"),
-        Challenge("Lotus Flower"),
-        Challenge("Hibiscus"),
-        Challenge("Pine Tree"),
-        Challenge("Willow"),
-        Challenge("Sunflower"),
-        Challenge("Russula Mushroom"),
-        Challenge("Cherry Tree"),
-        Challenge("Cactus"),
-        Challenge("Venus Fly Trap"),
-        Challenge("Willow Tree"),
-        Challenge("Rose"),
-        Challenge("Amanita Mushroom"),
-        Challenge("Daisy"),
-        Challenge("Lily Pad"),
-        Challenge("Saint George's sword"),
-        Challenge("Echeveria"),
-        Challenge("Lotus Flower"),
-        Challenge("Hibiscus"),
-        Challenge("Pine Tree"),
-        Challenge("Willow"),
-        Challenge("Sunflower"),
+    static let mockedChallenges = generateChallenges()
 
-    ]
+    static private func generateChallenges() -> [Challenge] {
+        let daysInMonth = DateHelper.daysInMonth(date: Date())
+
+        var challenges: [Challenge] = []
+        for _ in 1...daysInMonth {
+            challenges.append(Challenge())
+        }
+
+        return challenges
+    }
 }

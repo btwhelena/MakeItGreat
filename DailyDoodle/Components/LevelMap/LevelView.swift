@@ -17,12 +17,13 @@ struct LevelView: View {
     @State private var isPresented = false
 
     var body: some View {
-//            Text("\(didStartChallenge)")
             ZStack {
 
                 Path { path in
                     path.move(to: CGPoint(x: position.x, y: position.y + 48))
-                    path.addLine(to: CGPoint(x: previousPosition.x, y: previousPosition.y + 160))
+                    if position != previousPosition {
+                        path.addLine(to: CGPoint(x: previousPosition.x, y: previousPosition.y + 160))
+                    }
                 }
                 .stroke(style: strokeStyle)
                 .foregroundColor(Color("Secondary"))
@@ -40,11 +41,9 @@ struct LevelView: View {
                 .cornerRadius(24)
                 .position(position)
                 .padding([.vertical], 32)
-//                .sheet(isPresented: $isPresented) {
-//                    TodayChallengeView(isPresented: $isPresented)
-//                }
 
             }
+            .id("challenge-\(label)")
     }
 
     func action() {
