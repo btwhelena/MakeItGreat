@@ -48,11 +48,10 @@ struct DrawView: View {
         .onAppear {
             isVisible.wrappedValue = false
         }
-        }
     }
-//}
+}
 
-private extension DrawView {
+extension DrawView {
     func onCloseTapped() {
         presentation.wrappedValue.dismiss()
     }
@@ -80,3 +79,4 @@ struct DrawView_Previews: PreviewProvider {
         DrawView()
     }
 }
+

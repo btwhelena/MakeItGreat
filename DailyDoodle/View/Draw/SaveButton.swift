@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SaveButton: View {
     @Binding var open: Bool
+    var dv = DrawView()
     var icon = "checkmark"
     var offsetX = 0
     var offsetY = 0
@@ -16,7 +17,7 @@ struct SaveButton: View {
 
     var body: some View {
         Button(action: {
-
+            dv.onSaved()
         }, label: {
             Image(systemName: icon)
                 .foregroundColor(Theme.pinkCTA)
