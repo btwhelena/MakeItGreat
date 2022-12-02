@@ -15,8 +15,17 @@ struct GalleryView: View {
                 ZStack {
                     Color("Primary")
                 VStack {
-                    GeminiTitle(title: "Galeria")
-                        .padding(.top, 50)
+                    ZStack {
+                        Image("PinkHeader")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(Color("AccentColor"))
+                            .shadow(radius: 4, y: 5)
+
+
+                        GeminiTitle(title: "Gallery")
+                            .padding(.top, 1)
+                    }
                     BookSlider()
                     GalleryThemeView()
                         .padding(.bottom, 50)
@@ -41,14 +50,14 @@ struct GalleryView: View {
 
                         VStack(alignment: .leading, spacing: 18) {
                             Text(book.nameTheme)
-                                .font(.largeTitle)
-                                .foregroundColor(.black.opacity(0.7))
-                                .offset(x: CGFloat(currentIndex) * -(size.width + 30))
+                                .font(.custom(FontsManager.Eri_Serif.regular, size: 30))
+                                .foregroundColor(Color("Text").opacity(0.7))
+                                .offset(x: CGFloat(currentIndex) * -(size.width + 11))
                                 .opacity(currentIndex == index ? 1 : 0)
                                 .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7).delay(currentIndex < index ? 0.1 : 0), value: currentIndex == index)
 
                         }
-                        .frame(width: size.width + 30, alignment: .leading)
+                        .frame(width: size.width + 11, alignment: .trailing)
                     }
                 }
             }

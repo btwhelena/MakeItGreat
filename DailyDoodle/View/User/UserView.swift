@@ -13,7 +13,7 @@ struct UserView: View {
 
     var body: some View {
         ZStack (alignment: .top){
-            Color(red: 255/255, green: 252/255, blue: 230/255)
+            Color("Primary")
 
             Image("PinkBack")
                 .resizable()
@@ -29,19 +29,19 @@ struct UserView: View {
                     .clipShape(Circle())
                     .shadow(radius: 4)
 
-                Text("\(vm.userName)")
-//                Text("Jorge")
+//                Text("\(vm.userName)")
+                Text("Ana Clara")
                     .padding(.top, 10)
                     .multilineTextAlignment(.center)
-                    .foregroundColor(Color(red: 22/255, green: 80/255, blue: 80/255))
+                    .foregroundColor(Color("Text"))
                     .font(.custom(FontsManager.Eri_Serif.regular, size: 26))
 
                 Spacer().frame(height: 70)
 
                 HStack {
-                    StreakCardView(title: "Streak Atual", streak: 10)
+                    StreakCardView(title: "Current Streak", streak: 10)
                     Spacer().frame(width: 30)
-                    StreakCardView(title: "Maior Streak", streak: 13)
+                    StreakCardView(title: "Best Streak", streak: 13)
                 }
             }
         }.ignoresSafeArea(.all)

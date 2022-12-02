@@ -17,22 +17,22 @@ struct StreakCardView: View {
             VStack {
                 Text(title)
                     .font(.custom(FontsManager.Eri_Serif.regular, size: 20))
-                    .foregroundColor(Color.white)
+                    .foregroundColor(Color("StreakTitle"))
                     .padding(.bottom, 5)
 
                 Text("\(streak)")
                     .font(.custom(FontsManager.Gemini_Moon.regular, size: 36))
-                    .foregroundColor((Color(red: 163/255, green: 58/255, blue: 83/255)))
+                    .foregroundColor(Color("StreakText"))
                     .padding()
-                    .background(Circle().fill(Color(red: 255/255, green: 252/255, blue: 230/255)))
+                    .background(Circle().fill(Color("StreakBg")))
                     .overlay(
                         Circle()
-                        .stroke(Color(red: 163/255, green: 58/255, blue: 83/255), lineWidth: 3))
+                            .stroke(Color("StreakText"), lineWidth: 3))
                     .shadow(radius: 4, y: 5)
 
             }
             .padding()
-            .background(Color(red: 89/255, green: 156/255, blue: 156/255))
+            .background(Color("Streak"))
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
             .shadow(radius: 4, y: 5)
 
