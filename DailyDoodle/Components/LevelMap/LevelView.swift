@@ -17,7 +17,6 @@ struct LevelView: View {
     @State private var isPresented = false
 
     var body: some View {
-//            Text("\(didStartChallenge)")
             ZStack {
 
                 Path { path in
@@ -42,11 +41,9 @@ struct LevelView: View {
                 .cornerRadius(24)
                 .position(position)
                 .padding([.vertical], 32)
-//                .sheet(isPresented: $isPresented) {
-//                    TodayChallengeView(isPresented: $isPresented)
-//                }
 
             }
+            .id("challenge-\(label)")
     }
 
     func action() {

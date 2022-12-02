@@ -8,22 +8,28 @@
 import SwiftUI
 
 struct LevelMap: View {
-    
-    let screenWidth = UIScreen.main.bounds.width
-    let screenHeight = UIScreen.main.bounds.height
+
+    private let initialPosition = "challenge-\(DateHelper.getCurrentDay())"
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack {
-                Spacer()
-                    .frame(height: CGFloat(200))
-                ForEach(Challenge.mockedChallenges.reversed()) { challenge in
-                    challenge.view
+        VStack {
+//            Spacer()
+//                .frame(height: CGFloat(50))
+
+                ScrollViewReader { proxy in
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            ForEach(Challenge.mockedChallenges.reversed()) { challenge in
+                                challenge.view
+                            }
+                            Spacer()
+                                .frame(height: CGFloat(200))
+                        }
+                    }
+                    .onAppear {
+                        proxy.scrollTo(initialPosition)
+                    }
                 }
-                Spacer()
-                    .frame(height: CGFloat(200))
-            }
-            .frame(width: screenWidth)
         }
     }
 
@@ -44,13 +50,15 @@ class Challenge: Identifiable {
     static var lastPosition: CGPoint?
     var day: Int = 0
     let view: LevelView
+    var isCurrentDay: Bool
 
     init() {
         let screenWidth = UIScreen.main.bounds.width
         Challenge.createdDays += 1
         self.day = Challenge.createdDays
         let currentDay = DateHelper.getCurrentDay()
-        let initialPosition = CGFloat(300)
+        self.isCurrentDay = self.day == currentDay
+        //        let initialPosition = CGFloat(300)
         var currentY = CGFloat(80) //initialPosition * CGFloat(currentDay - self.day)
 
         let color = self.day == DateHelper.getCurrentDay() ? Color("AccentColor") : Color("Secondary")
@@ -58,7 +66,7 @@ class Challenge: Identifiable {
         let isButtonDisabled = self.day > DateHelper.getCurrentDay() ? true : false
 
         if Challenge.lastPosition != nil {
-            currentY = Challenge.lastPosition!.y - 8
+            currentY = Challenge.lastPosition!.y
 
             let currentPosition = CGPoint(x: CGFloat.random(in: 24...(screenWidth-56)), y: currentY)
 
