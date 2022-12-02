@@ -36,8 +36,6 @@ struct StreakCardView: View {
             .clipShape(RoundedRectangle(cornerRadius: 25.0, style: .continuous))
             .shadow(radius: 4, y: 5)
 
-        }//.background(Color(red: 233/255, green: 252/255, blue: 230/255))
-           // .frame(width: 200, height: 200)
-            //.cornerRadius(5)
+        }
     }
 }
