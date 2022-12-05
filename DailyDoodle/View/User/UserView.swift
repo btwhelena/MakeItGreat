@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserView: View {
 
-    @State var vm = CloudKitUser()
+    @StateObject var vm = CloudKitUser()
 
     var body: some View {
         ZStack (alignment: .top){
@@ -29,8 +29,7 @@ struct UserView: View {
                     .clipShape(Circle())
                     .shadow(radius: 4)
 
-//                Text("\(vm.userName)")
-                Text("Ana Clara")
+                Text("\(vm.userName)")
                     .padding(.top, 10)
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("Text"))
