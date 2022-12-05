@@ -21,7 +21,7 @@ struct DrawView: View {
     @StateObject private var vm = CloudKitCrudVM()
     @State var labelHeight = CGFloat.leastNonzeroMagnitude
 
-    @State private var isPresented = false
+    @State private var isImageFullScreen = false
     
     var body: some View {
         ZStack(alignment: .topTrailing){
@@ -42,10 +42,10 @@ struct DrawView: View {
                         
                     }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
 
-                    Button(action: {isPresented.toggle()}) {
+                    Button(action: {isImageFullScreen.toggle()}) {
                         ReferenceImage()
                     }
-                    .fullScreenCover(isPresented: $isPresented, content: FullScreenModalView.init)
+                    .fullScreenCover(isPresented: $isImageFullScreen, content: {FullScreenModalView(image: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)})
                     
 //                    NavigationLink(destination: FullPictureView(imagePath: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)) {
 //                        ReferenceImage()
@@ -88,38 +88,4 @@ struct DrawView_Previews: PreviewProvider {
     static var previews: some View {
         DrawView()
     }
-}
-
-struct FullScreenModalView: View {
-    @Environment(\.dismiss) var dismiss
-    @State private var offset: CGSize = CGSize(width: 0, height: 0)
-
-    var body: some View {
-                FullPictureView(imagePath: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)
-            .background(BackgroundBlurView())
-        .offset(offset)
-        .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-            .onChanged { gesture in
-                offset = gesture.translation
-            }
-            .onEnded({ value in
-                withAnimation {
-
-                        offset = CGSize(width: 0, height: 0)
-                }
-                    dismiss()
-            }))
-    }
-}
-
-struct BackgroundBlurView: UIViewRepresentable {
-    func makeUIView(context: Context) -> some UIView {
-        let view = UIVisualEffectView(effect: UIBlurEffect(style: .extraLight))
-        DispatchQueue.main.async {
-            view.superview?.superview?.backgroundColor = .clear
-        }
-        return view
-    }
-
-    func updateUIView(_ uiView: UIViewType, context: Context) {}
 }

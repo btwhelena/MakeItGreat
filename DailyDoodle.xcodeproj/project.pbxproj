@@ -18,6 +18,8 @@
 		0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
 		0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
 		0B0EC0022938E4410059B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0EC0012938E4410059B273 /* Assets.xcassets */; };
+		0B9556A0293E30F900D269DC /* FullScreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B95569F293E30F900D269DC /* FullScreenModalView.swift */; };
+		0B9556A2293E3BD100D269DC /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556A1293E3BD100D269DC /* GalleryItem.swift */; };
 		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
@@ -59,6 +61,8 @@
 		0B0EBFED29364A9C0059B273 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0B0EBFF029364E920059B273 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0B0EC0012938E4410059B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B95569F293E30F900D269DC /* FullScreenModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModalView.swift; sourceTree = "<group>"; };
+		0B9556A1293E3BD100D269DC /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
 		0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gemini Moon.otf"; sourceTree = "<group>"; };
 		0D8F56BF2930E9D0005C1672 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
 				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
 				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
+				0B95569F293E30F900D269DC /* FullScreenModalView.swift */,
+				0B9556A1293E3BD100D269DC /* GalleryItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -455,6 +461,7 @@
 				D97936292930E7610062BCE1 /* Protocol.swift in Sources */,
 				D6A3F70B2932916900AC5331 /* InfiniteCarrousel.swift in Sources */,
 				D6E0355B2937A3780061C6AE /* ImageFull.swift in Sources */,
+				0B9556A2293E3BD100D269DC /* GalleryItem.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
 				D6A3F70D293291B000AC5331 /* GeminiTitle.swift in Sources */,
 				D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */,
@@ -465,10 +472,9 @@
 				0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */,
 				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
-				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */,
-				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
+				0B9556A0293E30F900D269DC /* FullScreenModalView.swift in Sources */,
 				0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */,
 				D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */,
 				D6A3F71E2932A12600AC5331 /* GalleryView.swift in Sources */,

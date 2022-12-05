@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct FullPictureView: View {
-  var imagePath: UIImage
+  var image: UIImage
   var body: some View {
     ZoomableScrollView {
-        Image(uiImage: imagePath)
+        Image(uiImage: image)
         .resizable()
         .scaledToFit()
     }

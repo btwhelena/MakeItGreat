@@ -14,6 +14,7 @@ struct InfiniteCarrousel: View {
     @State var currentIndex: Int = 0
     @State var fakeIndex: Int = 0
     @State var offset: CGFloat = 0
+    @State private var isImageFullScreen = false
 
     var body: some View {
         
@@ -28,13 +29,14 @@ struct InfiniteCarrousel: View {
                     VStack(spacing: 18) {
 
                         if let url = currentDraw.imageURL, let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                            NavigationLink {
-                                ImageFull(image: image, book: currentDraw)
-                            } label: {
-                                Image(uiImage: image)
-                                    .resizable()
-                                    .scaledToFit()
-                            }
+                            GalleryItem(image: image, currentDraw: currentDraw)
+//                            NavigationLink {
+//                                ImageFull(image: image, book: currentDraw)
+//                            } label: {
+//                                Image(uiImage: image)
+//                                    .resizable()
+//                                    .scaledToFit()
+//                            }
                         }
                     }
                     .padding(.horizontal,20)
