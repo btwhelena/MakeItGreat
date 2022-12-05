@@ -25,6 +25,8 @@
 		0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56CF29363B92005C1672 /* StreakCardView.swift */; };
 		D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */; };
 		D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */; };
+		D64AA406293E2F21004341D3 /* ViewRoutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64AA405293E2F21004341D3 /* ViewRoutter.swift */; };
+		D64AA408293E2FAD004341D3 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64AA407293E2FAD004341D3 /* MotherView.swift */; };
 		D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */; };
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6A3F7062932827300AC5331 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F7052932827300AC5331 /* BookModel.swift */; };
@@ -36,6 +38,19 @@
 		D6E0355B2937A3780061C6AE /* ImageFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355A2937A3780061C6AE /* ImageFull.swift */; };
 		D6E0355D2937A5300061C6AE /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */; };
 		D6E0355F2937A5490061C6AE /* FullPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355E2937A5490061C6AE /* FullPictureView.swift */; };
+		D6E9CD85293A49DC00AFA727 /* 94992-error-404.json in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CD84293A49DC00AFA727 /* 94992-error-404.json */; };
+		D6E9CD88293A4A1A00AFA727 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6E9CD87293A4A1A00AFA727 /* Lottie */; };
+		D6E9CD8D293A4A5F00AFA727 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */; };
+		D6E9CD90293A4ACE00AFA727 /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD8F293A4ACE00AFA727 /* LockView.swift */; };
+		D6E9CD92293A4AED00AFA727 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD91293A4AED00AFA727 /* LoginScreen.swift */; };
+		D6E9CD96293AB57500AFA727 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD95293AB57500AFA727 /* SplashScreenView.swift */; };
+		D6E9CD99293ACF7300AFA727 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD98293ACF7300AFA727 /* HomeView.swift */; };
+		D6E9CD9B293ACF8F00AFA727 /* OnboardingTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD9A293ACF8F00AFA727 /* OnboardingTime.swift */; };
+		D6E9CD9D293ACF9A00AFA727 /* OnboardingDraws.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD9C293ACF9A00AFA727 /* OnboardingDraws.swift */; };
+		D6E9CD9F293AF13400AFA727 /* 97443-loading-gray.json in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CD9E293AF13400AFA727 /* 97443-loading-gray.json */; };
+		D6E9CDA1293AF7A200AFA727 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CDA0293AF7A200AFA727 /* Onboarding.swift */; };
+		D6E9CDA3293C297B00AFA727 /* LocalNotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CDA2293C297B00AFA727 /* LocalNotificationModel.swift */; };
+		D6E9CDA6293C2D6100AFA727 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CDA5293C2D6100AFA727 /* LocalNotificationManager.swift */; };
 		D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D8B4A292FB0CA000B1379 /* FontsManager.swift */; };
 		D97936272930E7570062BCE1 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936262930E7570062BCE1 /* UserController.swift */; };
 		D97936292930E7610062BCE1 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97936282930E7610062BCE1 /* Protocol.swift */; };
@@ -68,6 +83,8 @@
 		D63ADF7A2930FD1F000CCE19 /* CloudKitCrud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitCrud.swift; sourceTree = "<group>"; };
 		D63ADF7C2930FD2D000CCE19 /* CloudKitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUser.swift; sourceTree = "<group>"; };
 		D63ADF7E2930FED6000CCE19 /* DailyDoodle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyDoodle.entitlements; sourceTree = "<group>"; };
+		D64AA405293E2F21004341D3 /* ViewRoutter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoutter.swift; sourceTree = "<group>"; };
+		D64AA407293E2FAD004341D3 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		D6538AE729265952006DCBA7 /* DailyDoodle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyDoodle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6538AEA29265952006DCBA7 /* DailyDoodleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDoodleApp.swift; sourceTree = "<group>"; };
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +97,18 @@
 		D6E0355A2937A3780061C6AE /* ImageFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFull.swift; sourceTree = "<group>"; };
 		D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
 		D6E0355E2937A5490061C6AE /* FullPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPictureView.swift; sourceTree = "<group>"; };
+		D6E9CD84293A49DC00AFA727 /* 94992-error-404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "94992-error-404.json"; sourceTree = "<group>"; };
+		D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		D6E9CD8F293A4ACE00AFA727 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
+		D6E9CD91293A4AED00AFA727 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		D6E9CD95293AB57500AFA727 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D6E9CD98293ACF7300AFA727 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D6E9CD9A293ACF8F00AFA727 /* OnboardingTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTime.swift; sourceTree = "<group>"; };
+		D6E9CD9C293ACF9A00AFA727 /* OnboardingDraws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDraws.swift; sourceTree = "<group>"; };
+		D6E9CD9E293AF13400AFA727 /* 97443-loading-gray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "97443-loading-gray.json"; sourceTree = "<group>"; };
+		D6E9CDA0293AF7A200AFA727 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		D6E9CDA2293C297B00AFA727 /* LocalNotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationModel.swift; sourceTree = "<group>"; };
+		D6E9CDA5293C2D6100AFA727 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		D91D8B46292FAF74000B1379 /* Eri Serif.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Eri Serif.ttf"; sourceTree = "<group>"; };
 		D91D8B47292FAFED000B1379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D91D8B4A292FB0CA000B1379 /* FontsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsManager.swift; sourceTree = "<group>"; };
@@ -104,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0EBFF4293790C70059B273 /* Introspect in Frameworks */,
+				D6E9CD88293A4A1A00AFA727 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +264,65 @@
 			path = BookAnimation;
 			sourceTree = "<group>";
 		};
+		D6E9CD89293A4A2500AFA727 /* ZoomPicture */ = {
+			isa = PBXGroup;
+			children = (
+				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
+				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
+			);
+			path = ZoomPicture;
+			sourceTree = "<group>";
+		};
+		D6E9CD8A293A4A3B00AFA727 /* LottieView */ = {
+			isa = PBXGroup;
+			children = (
+				D6E9CD9E293AF13400AFA727 /* 97443-loading-gray.json */,
+				D6E9CD84293A49DC00AFA727 /* 94992-error-404.json */,
+				D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */,
+			);
+			path = LottieView;
+			sourceTree = "<group>";
+		};
+		D6E9CD8B293A4A4700AFA727 /* StyleText */ = {
+			isa = PBXGroup;
+			children = (
+				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
+			);
+			path = StyleText;
+			sourceTree = "<group>";
+		};
+		D6E9CD8E293A4A8400AFA727 /* LockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				D6E9CD8F293A4ACE00AFA727 /* LockView.swift */,
+				D6E9CD91293A4AED00AFA727 /* LoginScreen.swift */,
+				D6E9CD95293AB57500AFA727 /* SplashScreenView.swift */,
+			);
+			path = LockScreen;
+			sourceTree = "<group>";
+		};
+		D6E9CD97293ACF6100AFA727 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D6E9CD98293ACF7300AFA727 /* HomeView.swift */,
+				D6E9CD9A293ACF8F00AFA727 /* OnboardingTime.swift */,
+				D6E9CD9C293ACF9A00AFA727 /* OnboardingDraws.swift */,
+				D6E9CDA0293AF7A200AFA727 /* Onboarding.swift */,
+				D64AA405293E2F21004341D3 /* ViewRoutter.swift */,
+				D64AA407293E2FAD004341D3 /* MotherView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D6E9CDA4293C2D1800AFA727 /* LocalNotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				D6E9CDA2293C297B00AFA727 /* LocalNotificationModel.swift */,
+				D6E9CDA5293C2D6100AFA727 /* LocalNotificationManager.swift */,
+			);
+			path = LocalNotificationManager;
+			sourceTree = "<group>";
+		};
 		D91D8B49292FB0BD000B1379 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +345,8 @@
 		D97C4A44292E3C2F00192923 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D6E9CD97293ACF6100AFA727 /* Onboarding */,
+				D6E9CD8E293A4A8400AFA727 /* LockScreen */,
 				0B0EBFEF29364E750059B273 /* ImagePicker */,
 				0D8F56BD2930E9B0005C1672 /* Draw */,
 				0B0EBFE4293108FD0059B273 /* TodayChallengeSheet */,
@@ -285,6 +376,7 @@
 		D97C4A47292E3C8F00192923 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D6E9CDA4293C2D1800AFA727 /* LocalNotificationManager */,
 				D63ADF792930FCF7000CCE19 /* iCloud */,
 				D91D8B49292FB0BD000B1379 /* Fonts */,
 				0B0EBFE2293104A40059B273 /* DateHelper.swift */,
@@ -295,14 +387,14 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D6E9CD8B293A4A4700AFA727 /* StyleText */,
+				D6E9CD8A293A4A3B00AFA727 /* LottieView */,
+				D6E9CD89293A4A2500AFA727 /* ZoomPicture */,
 				0B0EBFEC29364A880059B273 /* CustomButton */,
 				0B0EBFE9293630EF0059B273 /* ReferenceImage */,
 				0B0EBFDD2930F8A00059B273 /* LevelMap */,
 				D6A3F70E293294DF00AC5331 /* BookAnimation */,
 				D97C4A58292E3DAB00192923 /* TabBar */,
-				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
-				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
-				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -364,6 +456,7 @@
 			name = DailyDoodle;
 			packageProductDependencies = (
 				0B0EBFF3293790C70059B273 /* Introspect */,
+				D6E9CD87293A4A1A00AFA727 /* Lottie */,
 			);
 			productName = DailyDoodle;
 			productReference = D6538AE729265952006DCBA7 /* DailyDoodle.app */;
@@ -395,6 +488,7 @@
 			mainGroup = D6538ADE29265952006DCBA7;
 			packageReferences = (
 				0B0EBFF2293790C70059B273 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				D6E9CD86293A4A1A00AFA727 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = D6538AE829265952006DCBA7 /* Products */;
 			projectDirPath = "";
@@ -413,6 +507,8 @@
 				0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */,
 				0B0EC0022938E4410059B273 /* Assets.xcassets in Resources */,
 				0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */,
+				D6E9CD9F293AF13400AFA727 /* 97443-loading-gray.json in Resources */,
+				D6E9CD85293A49DC00AFA727 /* 94992-error-404.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,29 +541,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B0EBFEB293631020059B273 /* ReferenceImage.swift in Sources */,
+				D6E9CDA1293AF7A200AFA727 /* Onboarding.swift in Sources */,
 				0B0EBFE3293104A40059B273 /* DateHelper.swift in Sources */,
 				0B0EBFE6293109210059B273 /* TodayChallengeSheet.swift in Sources */,
+				D64AA406293E2F21004341D3 /* ViewRoutter.swift in Sources */,
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
 				D6E0355F2937A5490061C6AE /* FullPictureView.swift in Sources */,
+				D6E9CDA6293C2D6100AFA727 /* LocalNotificationManager.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
+				D6E9CD8D293A4A5F00AFA727 /* LottieView.swift in Sources */,
+				D6E9CD96293AB57500AFA727 /* SplashScreenView.swift in Sources */,
 				D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */,
 				D97936292930E7610062BCE1 /* Protocol.swift in Sources */,
 				D6A3F70B2932916900AC5331 /* InfiniteCarrousel.swift in Sources */,
+				D6E9CD92293A4AED00AFA727 /* LoginScreen.swift in Sources */,
 				D6E0355B2937A3780061C6AE /* ImageFull.swift in Sources */,
+				D6E9CD90293A4ACE00AFA727 /* LockView.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
 				D6A3F70D293291B000AC5331 /* GeminiTitle.swift in Sources */,
 				D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */,
+				D6E9CDA3293C297B00AFA727 /* LocalNotificationModel.swift in Sources */,
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
 				D979363129312ACB0062BCE1 /* SaveButton.swift in Sources */,
 				0B0EBFEE29364A9C0059B273 /* CustomButton.swift in Sources */,
 				D9A172FA2932DBE9000B3DFF /* CloseButton.swift in Sources */,
 				0B0EBFDF2930F8BA0059B273 /* LevelMap.swift in Sources */,
 				0B0EBFE12930F8C70059B273 /* LevelView.swift in Sources */,
+				D6E9CD99293ACF7300AFA727 /* HomeView.swift in Sources */,
+				D6E9CD9D293ACF9A00AFA727 /* OnboardingDraws.swift in Sources */,
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
-				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */,
-				D97936252930E7480062BCE1 /* DrawModel.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
 				0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */,
 				D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */,
@@ -477,9 +581,11 @@
 				D6A3F7062932827300AC5331 /* BookModel.swift in Sources */,
 				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
 				D6A3F718293296EE00AC5331 /* IsometricView.swift in Sources */,
+				D64AA408293E2FAD004341D3 /* MotherView.swift in Sources */,
 				D6B9194029364DD60082233E /* GalleryDetailView.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 				0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */,
+				D6E9CD9B293ACF8F00AFA727 /* OnboardingTime.swift in Sources */,
 				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
 				0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */,
 				D9A172F82932DB73000B3DFF /* UndoButton.swift in Sources */,
@@ -703,6 +809,14 @@
 				minimumVersion = 0.1.4;
 			};
 		};
+		D6E9CD86293A4A1A00AFA727 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -710,6 +824,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0B0EBFF2293790C70059B273 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		D6E9CD87293A4A1A00AFA727 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6E9CD86293A4A1A00AFA727 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

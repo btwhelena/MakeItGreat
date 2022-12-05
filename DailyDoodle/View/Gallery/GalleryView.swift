@@ -72,12 +72,20 @@ struct GalleryView: View {
     func BookSlider()->some View {
         TabView(selection: $vm.selectedDraw) {
             ForEach(vm.draws.uniqued()) { book in
-                NavigationLink {
-                    GalleryDetailView(book: book)
-                } label: {
-                    BookView(book: book)
+                if !vm.draws.uniqued().isEmpty{
+                    NavigationLink {
+                        GalleryDetailView(book: book)
+                    } label: {
+                        BookView(book: book)
+                    }
+                    .tag(Optional(book))
+                } else {
+                    Text("Ops! Try to draw in map session to start")
+                        .font(.custom("Eri Serif", size: 26))
+                        .foregroundColor(Color("Text"))
+                        .multilineTextAlignment(.center)
                 }
-                .tag(Optional(book))
+
             }
         }
         .tabViewStyle(.page(indexDisplayMode: .never))

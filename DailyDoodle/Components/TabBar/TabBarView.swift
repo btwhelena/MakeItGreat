@@ -27,39 +27,41 @@ struct TabBar: View {
     @State var customTabBarIsVisible = true
 
     var body: some View {
-        ZStack (
-            alignment: Alignment(
-                horizontal: .center,
-                vertical: .bottom
-            )
-        ) {
-            //MARK: Tabview atualiza a view de acordo com a tag
-            TabView(selection: $selectedtab){
-                MapView()
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("map")
-                GalleryView()
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("gallery")
-                UserView()
-                    .ignoresSafeArea(.all, edges: .all)
-                    .tag("profile")
+        NavigationView{
+            ZStack (
+                alignment: Alignment(
+                    horizontal: .center,
+                    vertical: .bottom
+                )
+            ) {
+                //MARK: Tabview atualiza a view de acordo com a tag
+                TabView(selection: $selectedtab){
+                    MapView()
+                        .ignoresSafeArea(.all, edges: .all)
+                        .tag("map")
+                    GalleryView()
+                        .ignoresSafeArea(.all, edges: .all)
+                        .tag("gallery")
+                    UserView()
+                        .ignoresSafeArea(.all, edges: .all)
+                        .tag("profile")
+                }
+                .environment(\.customBarIsVisible, $customTabBarIsVisible)
+
+                //MARK: Configurações de imagens e botões para o que estiver selecionado
+                if customTabBarIsVisible {
+                    makeCustomTabBar()
+                }
+
             }
-            .environment(\.customBarIsVisible, $customTabBarIsVisible)
+            .ignoresSafeArea(.all, edges: .bottom)
 
-            //MARK: Configurações de imagens e botões para o que estiver selecionado
-            if customTabBarIsVisible {
-                makeCustomTabBar()
+            .introspectTabBarController { (UITabBarController) in
+                UITabBarController.tabBar.isHidden = true
             }
-
         }
-        .ignoresSafeArea(.all, edges: .bottom)
-
-        .introspectTabBarController { (UITabBarController) in
-            UITabBarController.tabBar.isHidden = true
-        }
+        .navigationBarBackButtonHidden(true)
     }
-
     func makeCustomTabBar() -> some View {
         HStack(spacing: 0) {
             ForEach(icons, id: \.self){ image in
