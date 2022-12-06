@@ -75,7 +75,7 @@ extension DrawView {
             image = canvasView.drawing.image(from: canvasView.bounds, scale: UIScreen.main.scale)
             previewDrawing = canvasView.drawing
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            vm.addItem(nameTheme:"Natal", nameDetail:"Lais",image: image)
+            vm.addItem(nameTheme:"Christmas", nameDetail:"CHALLENGE-\(DateHelper.getCurrentDay())",image: image)
         }
     }
 }

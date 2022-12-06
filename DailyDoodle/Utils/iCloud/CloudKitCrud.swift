@@ -45,7 +45,7 @@ class CloudKitCrudVM: ObservableObject {
     }
 
     private func saveItem(record: CKRecord){
-        CKContainer.default().publicCloudDatabase.save(record) { [weak self] returnedRecord, returnedError in
+        CKContainer.default().privateCloudDatabase.save(record) { [weak self] returnedRecord, returnedError in
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                 self?.fetchItems()
             }
@@ -53,10 +53,9 @@ class CloudKitCrudVM: ObservableObject {
     }
 
     func fetchItems() {
-        //let predicate = NSPredicate(format: "nameTheme = %@", argumentArray: ["Natal"])
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Books", predicate: predicate)
-        //query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let queryOperation = CKQueryOperation(query: query)
 
         var returnedItems: [BookModel] = []
@@ -111,6 +110,6 @@ class CloudKitCrudVM: ObservableObject {
     }
 
     func addOperation(operation: CKDatabaseOperation) {
-        CKContainer.default().publicCloudDatabase.add(operation)
+        CKContainer.default().privateCloudDatabase.add(operation)
     }
 }
