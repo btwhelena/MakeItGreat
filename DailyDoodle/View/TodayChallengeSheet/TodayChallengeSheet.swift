@@ -18,10 +18,6 @@ struct TodayChallengeView: View {
 
     @State var image: UIImage = UIImage(named: "snowman")!
 
-//    init(isPresented: Binding<Bool>) {
-//        UINavigationBar.appearance().backgroundColor = UIColor(named: "Primary")
-//        self._isPresented = isPresented
-//    }
 
     var body: some View {
             ZStack {
@@ -55,11 +51,6 @@ struct TodayChallengeView: View {
                 isVisible.wrappedValue = false
                 image = UIImage(named: "snowman")!
             }
-//            .onDisappear {
-//                withAnimation {
-//                    isVisible.wrappedValue = true
-//                }
-//            }
     }
 
     func dismissSheet() {

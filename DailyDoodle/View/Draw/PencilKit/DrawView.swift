@@ -37,7 +37,7 @@ struct DrawView: View {
                         UndoButton()
                             .frame(maxWidth: .infinity, alignment: .leading)
                         Spacer().frame(width: 170)
-                        OtherButton()
+                        OtherButton(action: onSaved)
                             .frame(maxWidth: .infinity, alignment: .trailing)
                         
                     }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
@@ -46,11 +46,6 @@ struct DrawView: View {
                         ReferenceImage()
                     }
                     .fullScreenCover(isPresented: $isImageFullScreen, content: {FullScreenModalView(image: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)})
-                    
-//                    NavigationLink(destination: FullPictureView(imagePath: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)) {
-//                        ReferenceImage()
-//                    }
-//
                 }
 
             .navigationBarHidden(true)
@@ -75,11 +70,12 @@ extension DrawView {
     }
 
     func onSaved() {
-        if !canvasView.drawing.bounds.isEmpty {
+        print(canvasView.bounds)
+        if !canvasView.bounds.isEmpty {
             image = canvasView.drawing.image(from: canvasView.bounds, scale: UIScreen.main.scale)
             previewDrawing = canvasView.drawing
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-            vm.addItem(nameTheme:"Natal", nameDetail:"Velas",image: image)
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            vm.addItem(nameTheme:"Natal", nameDetail:"Lais",image: image)
         }
     }
 }

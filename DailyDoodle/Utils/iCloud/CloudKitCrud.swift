@@ -35,7 +35,9 @@ class CloudKitCrudVM: ObservableObject {
             try data.write(to: url)
             let asset = CKAsset(fileURL: url)
             newDraw["imageDraw"] = asset
+            print(newDraw)
             saveItem(record: newDraw)
+
         } catch let error {
             print(error)
         }
@@ -44,7 +46,7 @@ class CloudKitCrudVM: ObservableObject {
 
     private func saveItem(record: CKRecord){
         CKContainer.default().publicCloudDatabase.save(record) { [weak self] returnedRecord, returnedError in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                 self?.fetchItems()
             }
         }
@@ -54,7 +56,7 @@ class CloudKitCrudVM: ObservableObject {
         //let predicate = NSPredicate(format: "nameTheme = %@", argumentArray: ["Natal"])
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Books", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+        //query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let queryOperation = CKQueryOperation(query: query)
 
         var returnedItems: [BookModel] = []
@@ -108,58 +110,7 @@ class CloudKitCrudVM: ObservableObject {
         addOperation(operation: queryOperation)
     }
 
-    func fetchDrawingsGroupedByTheme() -> Dictionary<String,[BookModel]> {
-        let drawings = CloudKitCrudVM().draws
-        return Dictionary(grouping: drawings, by: { $0.nameTheme })
-    }
-
     func addOperation(operation: CKDatabaseOperation) {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
 }
-
-//struct BookView: View {
-//    @ObservedObject var vm : CloudKitCrudVM
-//
-//    var body: some View {
-//        VStack{
-//            TextField("Add the theme name", text: $vm.nameTheme)
-//                .frame(height: 55)
-//                .padding(.leading)
-//                .background(Color.gray.opacity(0.6))
-//                .cornerRadius(10)
-//
-//            TextField("Add the theme detail name", text: $vm.nameDetail)
-//                .frame(height: 55)
-//                .padding(.leading)
-//                .background(Color.gray.opacity(0.6))
-//                .cornerRadius(10)
-//
-//            Button {
-//
-//            } label: {
-//                Text("Add")
-//                    .frame(width: 100, height: 55)
-//                    .padding(.leading)
-//                    .background(Color.pink.opacity(0.6))
-//                    .cornerRadius(10)
-//            }
-//
-//
-//            List {
-//                ForEach(vm.draws, id: \.self) { book in
-//                    HStack{
-//                        Text(book.nameTheme)
-//                        Text(book.nameDetail)
-//                        if let url = book.imageURL, let data = try? Data(contentsOf: url), let image = UIImage(data: data){
-//                            Image(uiImage: image)
-//                                .resizable()
-//                                .scaledToFit()
-//                                .frame(width: 20, height: 20)
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
