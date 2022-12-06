@@ -9,16 +9,14 @@ import SwiftUI
 
 struct SaveButton: View {
     @Binding var open: Bool
-    var dv = DrawView()
+    var action: () -> Void
     var icon = "checkmark"
     var offsetX = 0
     var offsetY = 0
     var delay = 0.0
 
     var body: some View {
-        Button(action: {
-            dv.onSaved()
-        }, label: {
+        Button(action: action, label: {
             Image(systemName: icon)
                 .foregroundColor(Theme.pinkCTA)
                 .font(.system(size: 40, weight: .bold))
