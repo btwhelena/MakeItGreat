@@ -21,8 +21,6 @@ struct GalleryView: View {
                             .scaledToFit()
                             .foregroundColor(Color("AccentColor"))
                             .shadow(radius: 4, y: 5)
-
-
                         GeminiTitle(title: "Gallery")
                             .padding(.top, 1)
                     }

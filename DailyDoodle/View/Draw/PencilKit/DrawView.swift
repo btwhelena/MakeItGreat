@@ -20,6 +20,8 @@ struct DrawView: View {
 
     @StateObject private var vm = CloudKitCrudVM()
     @State var labelHeight = CGFloat.leastNonzeroMagnitude
+
+    @State private var isImageFullScreen = false
     
     var body: some View {
         ZStack(alignment: .topTrailing){
@@ -39,9 +41,16 @@ struct DrawView: View {
                             .frame(maxWidth: .infinity, alignment: .trailing)
                         
                     }.frame(width: UIScreen.main.bounds.width, height: labelHeight + 50, alignment: .center)
+
+                    Button(action: {isImageFullScreen.toggle()}) {
+                        ReferenceImage()
+                    }
+                    .fullScreenCover(isPresented: $isImageFullScreen, content: {FullScreenModalView(image: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)})
                     
-                    ReferenceImage()
-                    
+//                    NavigationLink(destination: FullPictureView(imagePath: UIImage(named: "CHALLENGE-\(DateHelper.getCurrentDay())")!)) {
+//                        ReferenceImage()
+//                    }
+//
                 }
 
             .navigationBarHidden(true)
@@ -80,4 +89,3 @@ struct DrawView_Previews: PreviewProvider {
         DrawView()
     }
 }
-

@@ -18,6 +18,11 @@
 		0B0EBFF52937A41A0059B273 /* Eri Serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D91D8B46292FAF74000B1379 /* Eri Serif.ttf */; };
 		0B0EBFF62937A41D0059B273 /* Gemini Moon.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */; };
 		0B0EC0022938E4410059B273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0EC0012938E4410059B273 /* Assets.xcassets */; };
+		0B9556A2293E3BD100D269DC /* GalleryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556A1293E3BD100D269DC /* GalleryItem.swift */; };
+		0B9556A4293F61FE00D269DC /* FullScreenModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556A3293F61FE00D269DC /* FullScreenModalView.swift */; };
+		0B9556A8293F626600D269DC /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556A6293F626600D269DC /* ZoomableScrollView.swift */; };
+		0B9556A9293F626600D269DC /* FullPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556A7293F626600D269DC /* FullPictureView.swift */; };
+		0B9556AC293F627A00D269DC /* GeminiTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9556AB293F627A00D269DC /* GeminiTitle.swift */; };
 		0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56BF2930E9D0005C1672 /* CanvasView.swift */; };
 		0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C12930E9FC005C1672 /* DrawView.swift */; };
 		0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8F56C32930FFB0005C1672 /* Colors.swift */; };
@@ -31,13 +36,10 @@
 		D6538AED29265952006DCBA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6538AEC29265952006DCBA7 /* ContentView.swift */; };
 		D6A3F7062932827300AC5331 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F7052932827300AC5331 /* BookModel.swift */; };
 		D6A3F70B2932916900AC5331 /* InfiniteCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F70A2932916900AC5331 /* InfiniteCarrousel.swift */; };
-		D6A3F70D293291B000AC5331 /* GeminiTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F70C293291B000AC5331 /* GeminiTitle.swift */; };
 		D6A3F718293296EE00AC5331 /* IsometricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F717293296EE00AC5331 /* IsometricView.swift */; };
 		D6A3F71E2932A12600AC5331 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A3F71D2932A12600AC5331 /* GalleryView.swift */; };
 		D6B9194029364DD60082233E /* GalleryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B9193F29364DD60082233E /* GalleryDetailView.swift */; };
 		D6E0355B2937A3780061C6AE /* ImageFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355A2937A3780061C6AE /* ImageFull.swift */; };
-		D6E0355D2937A5300061C6AE /* ZoomableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */; };
-		D6E0355F2937A5490061C6AE /* FullPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E0355E2937A5490061C6AE /* FullPictureView.swift */; };
 		D6E9CD85293A49DC00AFA727 /* 94992-error-404.json in Resources */ = {isa = PBXBuildFile; fileRef = D6E9CD84293A49DC00AFA727 /* 94992-error-404.json */; };
 		D6E9CD88293A4A1A00AFA727 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D6E9CD87293A4A1A00AFA727 /* Lottie */; };
 		D6E9CD8D293A4A5F00AFA727 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */; };
@@ -74,6 +76,11 @@
 		0B0EBFED29364A9C0059B273 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0B0EBFF029364E920059B273 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		0B0EC0012938E4410059B273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B9556A1293E3BD100D269DC /* GalleryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryItem.swift; sourceTree = "<group>"; };
+		0B9556A3293F61FE00D269DC /* FullScreenModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenModalView.swift; sourceTree = "<group>"; };
+		0B9556A6293F626600D269DC /* ZoomableScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
+		0B9556A7293F626600D269DC /* FullPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullPictureView.swift; sourceTree = "<group>"; };
+		0B9556AB293F627A00D269DC /* GeminiTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeminiTitle.swift; sourceTree = "<group>"; };
 		0D8F56BC2930E8F9005C1672 /* Gemini Moon.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gemini Moon.otf"; sourceTree = "<group>"; };
 		0D8F56BF2930E9D0005C1672 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		0D8F56C12930E9FC005C1672 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
@@ -90,13 +97,10 @@
 		D6538AEC29265952006DCBA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D6A3F7052932827300AC5331 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		D6A3F70A2932916900AC5331 /* InfiniteCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCarrousel.swift; sourceTree = "<group>"; };
-		D6A3F70C293291B000AC5331 /* GeminiTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiTitle.swift; sourceTree = "<group>"; };
 		D6A3F717293296EE00AC5331 /* IsometricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsometricView.swift; sourceTree = "<group>"; };
 		D6A3F71D2932A12600AC5331 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		D6B9193F29364DD60082233E /* GalleryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailView.swift; sourceTree = "<group>"; };
 		D6E0355A2937A3780061C6AE /* ImageFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFull.swift; sourceTree = "<group>"; };
-		D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomableScrollView.swift; sourceTree = "<group>"; };
-		D6E0355E2937A5490061C6AE /* FullPictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPictureView.swift; sourceTree = "<group>"; };
 		D6E9CD84293A49DC00AFA727 /* 94992-error-404.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "94992-error-404.json"; sourceTree = "<group>"; };
 		D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		D6E9CD8F293A4ACE00AFA727 /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
@@ -190,6 +194,23 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		0B9556A5293F626600D269DC /* PictureView */ = {
+			isa = PBXGroup;
+			children = (
+				0B9556A6293F626600D269DC /* ZoomableScrollView.swift */,
+				0B9556A7293F626600D269DC /* FullPictureView.swift */,
+			);
+			path = PictureView;
+			sourceTree = "<group>";
+		};
+		0B9556AA293F627A00D269DC /* StyleText */ = {
+			isa = PBXGroup;
+			children = (
+				0B9556AB293F627A00D269DC /* GeminiTitle.swift */,
+			);
+			path = StyleText;
+			sourceTree = "<group>";
+		};
 		0D8F56BD2930E9B0005C1672 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,15 +285,6 @@
 			path = BookAnimation;
 			sourceTree = "<group>";
 		};
-		D6E9CD89293A4A2500AFA727 /* ZoomPicture */ = {
-			isa = PBXGroup;
-			children = (
-				D6E0355C2937A5300061C6AE /* ZoomableScrollView.swift */,
-				D6E0355E2937A5490061C6AE /* FullPictureView.swift */,
-			);
-			path = ZoomPicture;
-			sourceTree = "<group>";
-		};
 		D6E9CD8A293A4A3B00AFA727 /* LottieView */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,14 +293,6 @@
 				D6E9CD8C293A4A5F00AFA727 /* LottieView.swift */,
 			);
 			path = LottieView;
-			sourceTree = "<group>";
-		};
-		D6E9CD8B293A4A4700AFA727 /* StyleText */ = {
-			isa = PBXGroup;
-			children = (
-				D6A3F70C293291B000AC5331 /* GeminiTitle.swift */,
-			);
-			path = StyleText;
 			sourceTree = "<group>";
 		};
 		D6E9CD8E293A4A8400AFA727 /* LockScreen */ = {
@@ -387,14 +391,16 @@
 		D97C4A48292E3C9800192923 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D6E9CD8B293A4A4700AFA727 /* StyleText */,
+				0B9556AA293F627A00D269DC /* StyleText */,
+				0B9556A5293F626600D269DC /* PictureView */,
 				D6E9CD8A293A4A3B00AFA727 /* LottieView */,
-				D6E9CD89293A4A2500AFA727 /* ZoomPicture */,
 				0B0EBFEC29364A880059B273 /* CustomButton */,
 				0B0EBFE9293630EF0059B273 /* ReferenceImage */,
 				0B0EBFDD2930F8A00059B273 /* LevelMap */,
 				D6A3F70E293294DF00AC5331 /* BookAnimation */,
 				D97C4A58292E3DAB00192923 /* TabBar */,
+				0B9556A3293F61FE00D269DC /* FullScreenModalView.swift */,
+				0B9556A1293E3BD100D269DC /* GalleryItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -547,10 +553,10 @@
 				D64AA406293E2F21004341D3 /* ViewRoutter.swift in Sources */,
 				D97C4A5C292E3E0400192923 /* CustomShape.swift in Sources */,
 				D6538AED29265952006DCBA7 /* ContentView.swift in Sources */,
-				D6E0355F2937A5490061C6AE /* FullPictureView.swift in Sources */,
 				D6E9CDA6293C2D6100AFA727 /* LocalNotificationManager.swift in Sources */,
 				D97C4A5A292E3DF000192923 /* TabBarView.swift in Sources */,
 				D6E9CD8D293A4A5F00AFA727 /* LottieView.swift in Sources */,
+				0B9556A8293F626600D269DC /* ZoomableScrollView.swift in Sources */,
 				D6E9CD96293AB57500AFA727 /* SplashScreenView.swift in Sources */,
 				D63ADF7D2930FD2D000CCE19 /* CloudKitUser.swift in Sources */,
 				D97936292930E7610062BCE1 /* Protocol.swift in Sources */,
@@ -558,8 +564,8 @@
 				D6E9CD92293A4AED00AFA727 /* LoginScreen.swift in Sources */,
 				D6E0355B2937A3780061C6AE /* ImageFull.swift in Sources */,
 				D6E9CD90293A4ACE00AFA727 /* LockView.swift in Sources */,
+				0B9556A2293E3BD100D269DC /* GalleryItem.swift in Sources */,
 				D97C4A54292E3D1800192923 /* UserViewController.swift in Sources */,
-				D6A3F70D293291B000AC5331 /* GeminiTitle.swift in Sources */,
 				D63ADF7B2930FD1F000CCE19 /* CloudKitCrud.swift in Sources */,
 				D6E9CDA3293C297B00AFA727 /* LocalNotificationModel.swift in Sources */,
 				D97936272930E7570062BCE1 /* UserController.swift in Sources */,
@@ -573,10 +579,11 @@
 				D97C4A4E292E3CEE00192923 /* MapView.swift in Sources */,
 				0D8F56D029363B92005C1672 /* StreakCardView.swift in Sources */,
 				0D8F56C42930FFB0005C1672 /* Colors.swift in Sources */,
+				0B9556A4293F61FE00D269DC /* FullScreenModalView.swift in Sources */,
+				0B9556A9293F626600D269DC /* FullPictureView.swift in Sources */,
 				0B0EBFF129364E920059B273 /* ImagePicker.swift in Sources */,
 				D979362F2931282E0062BCE1 /* OtherButton.swift in Sources */,
 				D6A3F71E2932A12600AC5331 /* GalleryView.swift in Sources */,
-				D6E0355D2937A5300061C6AE /* ZoomableScrollView.swift in Sources */,
 				D6538AEB29265952006DCBA7 /* DailyDoodleApp.swift in Sources */,
 				D6A3F7062932827300AC5331 /* BookModel.swift in Sources */,
 				0D8F56C22930E9FC005C1672 /* DrawView.swift in Sources */,
@@ -585,6 +592,7 @@
 				D6B9194029364DD60082233E /* GalleryDetailView.swift in Sources */,
 				D97C4A52292E3D0B00192923 /* UserView.swift in Sources */,
 				0D8F56C7293629F5005C1672 /* ShareButton.swift in Sources */,
+				0B9556AC293F627A00D269DC /* GeminiTitle.swift in Sources */,
 				D6E9CD9B293ACF8F00AFA727 /* OnboardingTime.swift in Sources */,
 				D91D8B4B292FB0CA000B1379 /* FontsManager.swift in Sources */,
 				0D8F56C02930E9D0005C1672 /* CanvasView.swift in Sources */,
