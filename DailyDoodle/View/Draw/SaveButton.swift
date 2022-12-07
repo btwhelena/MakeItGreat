@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SaveButton: View {
     @Binding var open: Bool
+
     var action: () -> Void
     var icon = "checkmark"
     var offsetX = 0
@@ -16,7 +17,12 @@ struct SaveButton: View {
     var delay = 0.0
 
     var body: some View {
-        Button(action: action, label: {
+
+        Button(action: {
+
+            action()
+
+        }, label: {
             Image(systemName: icon)
                 .foregroundColor(Theme.pinkCTA)
                 .font(.system(size: 40, weight: .bold))
