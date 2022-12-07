@@ -21,6 +21,9 @@ struct DrawView: View {
     @StateObject private var vm = CloudKitCrudVM()
     @State var labelHeight = CGFloat.leastNonzeroMagnitude
 
+    @State private var showingAlert = false
+    @State private var isLinkActive = false
+
     @State private var isImageFullScreen = false
     
     var body: some View {
@@ -28,6 +31,10 @@ struct DrawView: View {
             CanvasView(canvasView: $canvasView)
                 .background(Color.black)
                 .ignoresSafeArea()
+            NavigationLink(destination: TabBar(), isActive: $isLinkActive) {
+                EmptyView()
+            }
+            .isDetailLink(false)
 
                 VStack {
                     HStack (spacing: 9){
@@ -49,6 +56,13 @@ struct DrawView: View {
                 }
 
             .navigationBarHidden(true)
+            .alert("Save success", isPresented: $showingAlert) {
+                Button("OK", role: .none) {
+                    showingAlert = false
+
+                    self.isLinkActive = true
+                }
+            }
             }
         .onAppear {
             isVisible.wrappedValue = false
@@ -70,11 +84,10 @@ extension DrawView {
     }
 
     func onSaved() {
-        print(canvasView.bounds)
+        showingAlert = true
         if !canvasView.bounds.isEmpty {
             image = canvasView.drawing.image(from: canvasView.bounds, scale: UIScreen.main.scale)
             previewDrawing = canvasView.drawing
-//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             vm.addItem(nameTheme:"Christmas", nameDetail:"CHALLENGE-\(DateHelper.getCurrentDay())",image: image)
         }
     }
