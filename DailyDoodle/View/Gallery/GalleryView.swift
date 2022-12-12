@@ -11,9 +11,9 @@ struct GalleryView: View {
     @StateObject var vm = CloudKitCrudVM()
 
     var body: some View {
-            NavigationView{
-                ZStack {
-                    Color("Primary")
+        NavigationView{
+            ZStack {
+                Color("Primary")
                 VStack {
                     ZStack {
                         Image("PinkHeader")
@@ -24,14 +24,23 @@ struct GalleryView: View {
                         GeminiTitle(title: "Gallery")
                             .padding(.top, 1)
                     }
-                    BookSlider()
-                    GalleryThemeView()
-                        .padding(.bottom, 50)
+
+                    if !vm.draws.uniqued().isEmpty{
+                        BookSlider()
+                        GalleryThemeView()
+                            .padding(.bottom, 50)
+                    } else {
+                        Text("Ops! Try to draw in map session to start")
+                            .font(.custom("Eri Serif", size: 26))
+                            .foregroundColor(Color("Text"))
+                            .padding(100)
+                            .multilineTextAlignment(.center)
+                    }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
 
             }
-                .ignoresSafeArea(.all, edges: .all)
+            .ignoresSafeArea(.all, edges: .all)
         }
     }
 
@@ -70,19 +79,13 @@ struct GalleryView: View {
     func BookSlider()->some View {
         TabView(selection: $vm.selectedDraw) {
             ForEach(vm.draws.uniqued()) { book in
-                if !vm.draws.uniqued().isEmpty{
-                    NavigationLink {
-                        GalleryDetailView(book: book)
-                    } label: {
-                        BookView(book: book)
-                    }
-                    .tag(Optional(book))
-                } else {
-                    Text("Ops! Try to draw in map session to start")
-                        .font(.custom("Eri Serif", size: 26))
-                        .foregroundColor(Color("Text"))
-                        .multilineTextAlignment(.center)
+                NavigationLink {
+                    GalleryDetailView(book: book, vm: vm)
+                } label: {
+                    BookView(book: book)
                 }
+                .tag(Optional(book))
+
 
             }
         }

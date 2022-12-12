@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GalleryDetailView: View {
     @State var book: BookModel
-    @StateObject var vm = CloudKitCrudVM()
+    @State var vm: CloudKitCrudVM
 
     var body: some View {
         ZStack {

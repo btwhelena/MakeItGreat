@@ -55,7 +55,7 @@ class CloudKitCrudVM: ObservableObject {
     func fetchItems() {
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Books", predicate: predicate)
-        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
+//        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         let queryOperation = CKQueryOperation(query: query)
 
         var returnedItems: [BookModel] = []
