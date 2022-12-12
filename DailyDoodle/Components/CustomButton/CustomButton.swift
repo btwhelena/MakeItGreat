@@ -16,7 +16,7 @@ struct CustomButton: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.custom(FontsManager.Eri_Serif.regular, size: 17))
+                .font(.custom(FontsManager.Eri_Serif.regular, size: 20))
                 .foregroundColor(foregroundColor)
                 .padding(15)
         }

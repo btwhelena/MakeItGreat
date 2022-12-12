@@ -18,7 +18,7 @@ struct OnboardingTime: View {
                         .foregroundColor(Color("Text"))
                         .font(.custom("Eri Serif", size: 42))
                         .multilineTextAlignment(.center)
-                    Text("Escolha seu turno favorito para desenhar")
+                    Text("Escolha seu horário favorito para desenhar")
                         .foregroundColor(Color("Text"))
                         .font(.custom("Eri Serif", size: 24))
                         .multilineTextAlignment(.center)
@@ -45,7 +45,7 @@ struct OnboardingTime: View {
                                 .foregroundColor(Color("AccentColor"))
 
                             Text("Iniciar")
-                                .foregroundColor(Color("Text"))
+                                .foregroundColor(Color("HeaderTitle"))
                                 .font(.custom("Eri Serif", size: 24))
                                 .multilineTextAlignment(.center)
                         }

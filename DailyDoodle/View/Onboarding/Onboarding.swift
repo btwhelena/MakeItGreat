@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Onboarding: View {
     @StateObject var lnManager = LocalNotificationManager()
-    @State var selectedtab = "home"
+    @State var selectedtab = "content"
     @State var offset: CGFloat = 0
     
     var body: some View {
@@ -22,9 +22,6 @@ struct Onboarding: View {
                     )
                 ) {
                     TabView(selection: $selectedtab){
-                        HomeView()
-                            .ignoresSafeArea(.all, edges: .all)
-                            .tag("home")
                         OnboardingDraws()
                             .ignoresSafeArea(.all, edges: .all)
                             .tag("content")
@@ -33,8 +30,8 @@ struct Onboarding: View {
                             .tag("container")
                             .environmentObject(lnManager)
 
-                        if selectedtab == "home" {
-                            HomeView()
+                        if selectedtab == "content" {
+                            OnboardingDraws()
                                 .overlay (
                                     GeometryReader{ proxy->Color in
                                         let minX = proxy.frame(in: .global).minX
@@ -55,7 +52,7 @@ struct Onboarding: View {
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     .overlay (
                         HStack(spacing:15){
-                            ForEach(0..<3) {index in
+                            ForEach(0..<2) {index in
                                 Capsule()
                                     .fill(Color.white)
                                     .frame(width: getIndex() == index ? 20 : 7,height: 7)

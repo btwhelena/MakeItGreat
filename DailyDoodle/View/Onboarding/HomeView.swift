@@ -8,31 +8,97 @@
 import SwiftUI
 
 struct HomeView: View {
+
+    @State var offset : CGSize = .zero
+    @State var showHome = false
+
     var body: some View {
 
-        ZStack {
-            Color("Primary")
-            HStack {
-                Text("Vamos \nComeçar?")
-                    .foregroundColor(Color("Text"))
-                    .font(.custom("Eri Serif", size: 42))
-                    .multilineTextAlignment(.leading)
-                    .position(x: UIScreen.main.bounds.height/7,y: UIScreen.main.bounds.height/2)
-                    .frame(width:UIScreen.main.bounds.width/1.9)
+        NavigationView {
+            ZStack {
+                Color("Text")
 
-                ZStack{
-                    Custombottom()
-                        .fill(Color("Text"))
+                .clipShape(LiquidSwipe(offset: offset))
+                .ignoresSafeArea()
+                .overlay(
+
                     Image(systemName: "chevron.left")
-                        .resizable()
+                        .font(.title.bold())
+                        .foregroundColor(Color("Text"))
+                        .frame(width: 50, height: 250)
+                        .contentShape(Rectangle())
+                        .gesture(DragGesture().onChanged({ (value) in
+
+                            withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                                offset = value.translation
+                            }
+
+                        }).onEnded({(value) in
+
+                            let screen = UIScreen.main.bounds
+
+                            withAnimation(.spring()){
+
+                                if -offset.width > screen.width / 2 {
+                                    offset.width = -screen.height
+                                    showHome.toggle()
+                                } else {
+                                    offset = .zero
+                                }
+
+                            }
+                        }))
+                        .offset(x: 15, y: -40)
+                        .foregroundColor(.white)
+                        .opacity(offset == .zero ? 1 : 0)
+
+                    ,alignment: .topTrailing
+                )
+                .padding(.trailing)
+
+                if showHome {
+                    Onboarding()
+                }
+
+                VStack {
+
+                    Spacer().frame(height: 120)
+                    Text("Vamos começar?")
+                        .multilineTextAlignment(.leading)
                         .foregroundColor(Color("Primary"))
-                        .frame(width: 30, height: 50)
-                        .offset(x:UIScreen.main.bounds.width-380, y:-306)
+                        .font(.custom(FontsManager.Eri_Serif.regular, size: 35))
+                        .padding(.trailing)
+                        .offset(x: -15)
+                        .gesture(DragGesture().onChanged({ (value) in
+
+                            withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.6, blendDuration: 0.6)){
+                                offset = value.translation
+                            }
+
+                        }).onEnded({(value) in
+
+                            let screen = UIScreen.main.bounds
+
+                            withAnimation(.spring()){
+
+                                if -offset.width > screen.width / 2 {
+                                    offset.width = -screen.height
+                                    showHome.toggle()
+                                } else {
+                                    offset = .zero
+                                }
+
+                            }
+                        }))
+                        .offset(x: 15, y: -40)
+                        .foregroundColor(Color("Text"))
+                        .opacity(offset == .zero ? 1 : 0)
+
+                    Spacer().frame(height: 100)
 
                 }
             }
-        }
-        .ignoresSafeArea()
+        }.navigationBarBackButtonHidden(true)
     }
 }
 
@@ -42,17 +108,37 @@ struct HomeView_Previews: PreviewProvider {
     }
 }
 
-struct Custombottom: Shape {
+struct LiquidSwipe: Shape {
+
+    var offset : CGSize
+
+    var animatableData: CGSize.AnimatableData {
+        get{return offset.animatableData}
+        set{offset.animatableData = newValue}
+    }
+
     func path(in rect: CGRect) -> Path {
-        var path = Path()
+        return Path{path in
 
-        path.addArc(center: CGPoint(x: rect.minX+110, y: rect.minY+120), radius: rect.width/3, startAngle: .degrees(0), endAngle: .degrees(360), clockwise: true)
 
-        path.move(to: CGPoint(x: rect.minX+100, y: rect.minY))
-        path.addLine(to: CGPoint(x: rect.minX+100, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+            let width = rect.width + (-offset.width >  0 ? offset.width : 0)
 
-        return path
+            path.move(to: CGPoint(x: 0, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: 0))
+            path.addLine(to: CGPoint(x: rect.width, y: rect.height))
+            path.addLine(to: CGPoint(x: 0, y: rect.height))
+
+            let from = 80 + (offset.width)
+
+            path.move(to: CGPoint(x: rect.width, y: from > 80 ? 80 : from))
+
+            var to = 180 + (offset.height) + (-offset.width)
+            to = to < 180 ? 180 : to
+
+            let mid : CGFloat = 80 + ((to - 80) / 2)
+
+            path.addCurve(to: CGPoint(x: rect.width, y: to), control1: CGPoint(x: width - 50, y: mid), control2: CGPoint(x: width - 50, y: mid))
+
+        }
     }
 }

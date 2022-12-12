@@ -25,7 +25,18 @@ struct TodayChallengeView: View {
                 VStack {
                     Spacer()
                     ReferenceImage(width: 400, height: 240)
-                    Spacer()
+
+                    Spacer().frame(height: 50)
+
+                    Text("Try to draw the reference image in the app or upload it from your gallery")
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Color("Text"))
+                        .font(.custom(FontsManager.Eri_Serif.regular, size: 23))
+                        .padding(.trailing, 50)
+                        .padding(.leading, 50)
+
+                    Spacer().frame(height: 100)
+
                     NavigationLink(destination: DrawView(), isActive: $isActive) {
                         CustomButton(title: "Start Challenge", action: startChallenge)
                     }
@@ -43,7 +54,8 @@ struct TodayChallengeView: View {
                 ToolbarItem(placement: .principal) {
                     Text("Today's Challenge")
                         .foregroundColor(Color("Text"))
-                        .font(.custom(FontsManager.Eri_Serif.regular, size: 17))
+                        .font(.custom(FontsManager.Eri_Serif.regular, size: 20))
+                        .bold()
                 }
             }
             .ignoresSafeArea(.all, edges: .all)

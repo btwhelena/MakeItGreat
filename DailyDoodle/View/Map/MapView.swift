@@ -20,10 +20,19 @@ struct MapView: View {
             ZStack {
                 Color("Primary")
                 VStack {
-                    Spacer()
-                        .frame(height: CGFloat(50))
-                    LevelMap()
-                }
+                    ZStack {
+                        LevelMap()
+                        Image("PinkHeader")
+                            .resizable()
+                            .scaledToFit()
+                            .foregroundColor(Color("AccentColor"))
+                            .shadow(radius: 4, y: 5)
+                            .frame(height: 850, alignment: .top)
+                        GeminiTitle(title: "Map")
+                            .padding(.top, 1)
+                            .frame(height: 750, alignment: .top)
+                    }
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
             .ignoresSafeArea(.all, edges: .all)
             .onAppear {

@@ -25,7 +25,8 @@ struct LoginScreen: View {
         }
         .onAppear(){
             DispatchQueue.main.async {
-                isUnlock = vm.isSignedInToICloud
+//                isUnlock = vm.isSignedInToICloud
+                isUnlock = true
             }
         }
     }

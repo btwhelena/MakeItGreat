@@ -14,7 +14,7 @@ struct MotherView : View {
     var body: some View {
         VStack {
             if viewRouter.currentPage == "onboardingView" {
-                Onboarding()
+                HomeView()
             } else if viewRouter.currentPage == "homeView" {
                 TabBar()
             }
