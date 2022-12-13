@@ -1,10 +1,3 @@
-//
-//  HomevIEW.swift
-//  DailyDoodle
-//
-//  Created by Ieda Xavier on 02/12/22.
-//
-
 import SwiftUI
 
 struct HomeView: View {
@@ -25,7 +18,7 @@ struct HomeView: View {
                     Image(systemName: "chevron.left")
                         .font(.title.bold())
                         .foregroundColor(Color("Text"))
-                        .frame(width: 50, height: 250)
+                        .frame(width: UIScreen.main.bounds.width * 0.12, height: UIScreen.main.bounds.height * 0.24)
                         .contentShape(Rectangle())
                         .gesture(DragGesture().onChanged({ (value) in
 

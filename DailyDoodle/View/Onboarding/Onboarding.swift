@@ -50,19 +50,6 @@ struct Onboarding: View {
                         }
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                    .overlay (
-                        HStack(spacing:15){
-                            ForEach(0..<2) {index in
-                                Capsule()
-                                    .fill(Color.white)
-                                    .frame(width: getIndex() == index ? 20 : 7,height: 7)
-
-                            }
-                        }
-                            .padding(.bottom, UIApplication.shared.windows.first?.safeAreaInsets.bottom)
-                        , alignment: .bottom
-
-                    )
 
                 }
                 .ignoresSafeArea(.all, edges: .bottom)

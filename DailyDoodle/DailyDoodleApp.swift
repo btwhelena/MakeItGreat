@@ -12,7 +12,7 @@ struct DailyDoodleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+            HomeView()
         }
     }
 }

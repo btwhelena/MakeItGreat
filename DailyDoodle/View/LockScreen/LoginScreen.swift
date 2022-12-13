@@ -18,7 +18,7 @@ struct LoginScreen: View {
             if isUnlock {
                 MotherView()
                     .environmentObject(vr)
-                    
+
             } else {
                 LockView()
             }
@@ -30,26 +30,4 @@ struct LoginScreen: View {
             }
         }
     }
-
-    func authenticate(){
-        let context = LAContext()
-        var error: NSError?
-
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "we need to unlock your data"
-
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                if success {
-                    //authentication successfully
-                    isUnlock = true
-
-                } else {
-                    //there was a problem
-                }
-            }
-        } else {
-            //no biometrics
-        }
-    }
 }
-
